@@ -1,0 +1,19 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\generators",
+    "\\generators\\app",
+    "\\generators\\hub",
+    "\\generators\\hub\\templates",
+    "\\generators\\hub\\templates\\marketplace",
+    "\\generators\\hub\\templates\\src",
+    "\\generators\\hub\\templates\\src\\module",
+    "\\generators\\hub\\templates\\static",
+    "\\generators\\hub\\templates\\static\\css",
+    "\\generators\\hub\\templates\\static\\images",
+    "\\generators\\hub\\templates\\test",
+    "\\generators\\taskitem"
+  ],
+  "SelectedNode": "\\generators\\hub\\templates\\src\\module\\app.ts",
+  "PreviewInSolutionExplorer": false
+}

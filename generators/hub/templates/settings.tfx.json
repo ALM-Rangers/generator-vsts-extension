@@ -1,0 +1,11 @@
+﻿{
+  "serviceUrl": "https://your.visualstudio.com.account",
+  "package": {
+    "manifestGlobs": [ "vss-extension.json" ]
+  },
+  "publish": {
+    "galleryUrl": "https://marketplace.visualstudio.com/",
+    "token": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "shareWith": "youraccount"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "scripts": {
+    "clean": "rimraf ./dist && rimraf ./*.vsix"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.0",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-jasmine": "*",
+    "grunt-exec": "*",
+    "jasmine": "^2.5.1",
+    "rimraf": "^2.5.4",
+    "tfx-cli": "^0.3.45",
+    "typescript": "^2.1.4"
+  },
+  "dependencies": {
+    "@types/jquery": "^2.0.34",
+    "@types/q": "0.0.32",
+    "vss-web-extension-sdk": "^2.109.1",
+    "applicationinsights-js":"*"
+  },
+  "name": "",
+  "private": true,
+  "version": "0.0.0"
+}

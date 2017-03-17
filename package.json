@@ -1,0 +1,78 @@
+{
+   "name": "generator-vsts-ext",
+   "version": "0.0.0",
+   "description": "Team Foundation Server and Team Services extension code generator",
+   "homepage": "https://github.com/ALM-Rangers/Yeoman-extension-code-generator",
+   "author": {
+      "name": "Visual Studio ALM Rangers"
+   },
+   "contributors": [
+      {
+         "name": "Josh Garverick",
+         "email": "jgarverick@outlook.com",
+         "url": "http://joshgarverick.blogspot.com"
+      },
+      {
+         "name": "Mikael Krief",
+         "email": "krief_mikael@hotmail.com",
+         "url": "http://www.mikaelkrief.com"
+      }
+   ],
+   "files": [
+      "generators/app",
+      "generators/hub",
+      "generators/taskitem"
+   ],
+   "main": "generators/index.js",
+   "keywords": [
+      "Visual Studio Team Services",
+      "Team Foundation Server",
+      "extension",
+      "task",
+      "widget",
+      "yeoman-generator"
+   ],
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/ALM-Rangers/Yeoman-extension-code-generator"
+   },
+   "dependencies": {
+      "yeoman-generator": "^0.23.0",
+      "chalk": "^1.0.0",
+      "yosay": "^1.0.0"
+   },
+   "devDependencies": {
+      "yeoman-test": "*",
+      "yeoman-assert": "*",
+      "eslint": "^3.1.1",
+      "eslint-config-xo-space": "^0.15.0",
+      "gulp": "^3.9.0",
+      "gulp-eslint": "^3.0.1",
+      "jshint": "^2.9.4",
+      "gulp-jshint": "^2.0.4",
+      "gulp-istanbul": "^1.0.0",
+      "gulp-mocha": "^3.0.1",
+      "gulp-spawn-mocha": "^3.1.0",
+      "gulp-plumber": "^1.0.0",
+      "gulp-nsp": "^2.1.0",
+      "uuid": "*",
+      "fs-extra": "^0.30.0",
+      "istanbul": "*",
+      "mocha": "^3.1.2",
+      "sinon": "*",
+      "typescript": "^2.1.4",
+      "yo": "^1.8.5",
+      "xunit-file": "^1.0.0",
+      "snyk": "^1.24.6"
+   },
+   "eslintConfig": {
+      "extends": "xo-space",
+      "env": {
+         "mocha": true
+      }
+   },
+   "license": "MIT",
+   "scripts": {
+      "test": "istanbul cover --report cobertura --report html node_modules/mocha/bin/_mocha -- -R xunit-file"
+   }
+}
