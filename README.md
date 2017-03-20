@@ -1,4 +1,4 @@
-﻿# Yeoman-extension-code-generator
+# Yeoman-extension-code-generator
 >  Team Foundation Server and Team Services extension code generator.
 
 ## Build status
@@ -107,3 +107,7 @@ The generated extensions needs these 3 rd libraries
 - [jasmine](https://www.npmjs.com/package/jasmine)
 - [rimraf](https://www.npmjs.com/package/rimraf)
 - [tfx-cli](https://www.npmjs.com/package/tfx-cli)
+
+The DevOps assets folder contains scripts we have sourced from 3rd parties
+
+- [Set-PackageQuality.ps1, by René van Osnabrugge](https://roadtoalm.com/2017/01/16/programmatically-promote-your-package-quality-with-release-views-in-vsts/)
