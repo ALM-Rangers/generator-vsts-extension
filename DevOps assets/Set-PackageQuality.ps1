@@ -1,3 +1,7 @@
+<#
+Script sourced from https://roadtoalm.com/2017/01/16/programmatically-promote-your-package-quality-with-release-views-in-vsts/, authored by René van Osnabrugge
+#>
+
 param
 (
         [ValidateSet("nuget","npm")][string] $feedType = "nuget",
