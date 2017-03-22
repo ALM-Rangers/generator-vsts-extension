@@ -1,4 +1,4 @@
-﻿# Yeoman-extension-code-generator
+# Yeoman-extension-code-generator
 >  Team Foundation Server and Team Services extension code generator.
 
 ## Build status
@@ -53,8 +53,6 @@ gulp test
  * Yeoman can be too opinionated at times but is easily convinced not to be.
  * Feel free to [learn more about Yeoman](http://yeoman.io/).
 
-## License
-
 ## Contributors
 We thank the following contributor(s) : Josh Garverick and Mikael Krief
 
@@ -73,9 +71,8 @@ And npm dependencies list are :
 
 - [chalk](https://www.npmjs.com/package/chalk)
 - [eslint](https://www.npmjs.com/package/eslint)
-- [eslint-config-xo-space :
-(https://www.npmjs.com/package/eslint-config-xo-space](https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Feslint-config-xo-space&data=02%7C01%7Cwillys%40microsoft.com%7C907c9b82cf61412f6b0508d457419347%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636229386549017901&sdata=IT0a%2BkuReH%2BJiMVd8hAhCXBbHxJ%2FseZxw7FIL0xptqA%3D&reserved=0)
-- [fs-extra](https://www.npmjs.com/package/fs-extra](https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Ffs-extra&data=02%7C01%7Cwillys%40microsoft.com%7C907c9b82cf61412f6b0508d457419347%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636229386549017901&sdata=iuN1N%2BCf%2BvLl1YSaR81McxtxN2nwDtQM%2BZKfxBeDIm4%3D&reserved=0)
+- [eslint-config-xo-space](https://www.npmjs.com/package/eslint-config-xo-space)
+- [fs-extra](https://www.npmjs.com/package/fs-extra)
 - [gulp](https://www.npmjs.com/package/gulp)
 - [gulp-eslint](https://www.npmjs.com/package/gulp-eslint)
 - [gulp-istanbul](https://www.npmjs.com/package/gulp-istanbul)
@@ -107,3 +104,7 @@ The generated extensions needs these 3 rd libraries
 - [jasmine](https://www.npmjs.com/package/jasmine)
 - [rimraf](https://www.npmjs.com/package/rimraf)
 - [tfx-cli](https://www.npmjs.com/package/tfx-cli)
+
+The DevOps assets folder contains scripts we have sourced from 3rd parties
+
+- [Set-PackageQuality.ps1, by René van Osnabrugge](https://roadtoalm.com/2017/01/16/programmatically-promote-your-package-quality-with-release-views-in-vsts/)
