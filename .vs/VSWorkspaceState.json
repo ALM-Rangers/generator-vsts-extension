@@ -1,15 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\generators\\app",
-    "\\generators\\hub",
-    "\\generators\\hub\\templates",
-    "\\generators\\hub\\templates\\marketplace",
-    "\\generators\\hub\\templates\\src",
-    "\\generators\\hub\\templates\\src\\module",
-    "\\generators\\hub\\templates\\static",
-    "\\generators\\hub\\templates\\static\\css"
+    ""
   ],
-  "SelectedNode": "\\generators",
+  "SelectedNode": "\\README.md",
   "PreviewInSolutionExplorer": false
 }
