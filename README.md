@@ -1,10 +1,11 @@
 # Yeoman-extension-code-generator
+
 >  Team Foundation Server and Team Services extension code generator.
 
-## Build status
-![VSTS](https://almrangers.visualstudio.com/_apis/public/build/definitions/7f3cfb9a-d1cb-4e66-9d36-1af87b906fe9/137/badge)
+![VSTS](https://almrangers.visualstudio.com/_apis/public/build/definitions/7f3cfb9a-d1cb-4e66-9d36-1af87b906fe9/137/badge) | [![NPM](https://nodei.co/npm/generator-vsts-ext.png?mini=true)](https://www.npmjs.com/package/generator-vsts-ext)
 
 ## Capabilities
+
 Generator-vsts-ext is [Yeoman](http://yeoman.io/) generator that create an extension for Visual Studio Team Services or Team Foundation Server.
 
 The extension type can be :
@@ -12,6 +13,7 @@ The extension type can be :
 - Custom build or release task
 
 ## Requirements
+
 - [Node.js](http://nodejs.org/) with [NPM](https://www.npmjs.com/), Minimum version 6.9.5 LTS (https://nodejs.org/)
 - [Yeoman](http://yeoman.io/) : npm install -g yo
 - [Grunt](https://www.npmjs.com/package/grunt) : npm install -g grunt
@@ -19,6 +21,7 @@ The extension type can be :
 - [typescript (necessary for new hub extension)](https://www.npmjs.com/package/typescript) : npm install -g typescript
 
 ## Installation
+
 First, install the generator
 
 ```bash
@@ -32,6 +35,7 @@ yo vsts-ext
 ```
 
 ## Test this generator locally
+
 - clone this repository
 - with command prompt navigate to the package folder and run this command for link npm package on this folder
 Use [npm link](https://docs.npmjs.com/cli/link)
@@ -47,24 +51,45 @@ npm link
 gulp test
 ```
 
-## Getting To Know Yeoman
+## Getting started
+
+### Generated templates
+
+We've included **//TODO:** placeholders in the generated license, thirdpartynotices, and overview files to guide you through the changes you need to make.
+
+### Visual Studio Teams Service Web Extension
+
+Take a look at the information on getting started with extensions, RESTful APIs, SDK, and the marketplace. I
+
+- [Overview](https://www.visualstudio.com/en-us/docs/integrate/extensions/overview)
+- [RESTful API Library](https://www.visualstudio.com/en-us/docs/integrate/api/overview)
+- [SDK](https://github.com/Microsoft/vss-web-extension-sdk)
+- [VSTS Marketplace](https://marketplace.visualstudio.com/VSTS)
+
+### Yeoman
+
  * Yeoman has a heart of gold.
  * Yeoman is a person with feelings and opinions, but is very easy to work with.
  * Yeoman can be too opinionated at times but is easily convinced not to be.
  * Feel free to [learn more about Yeoman](http://yeoman.io/).
 
-## Contributors
-We thank the following contributor(s) : Josh Garverick and Mikael Krief
+## Contributions
 
-#Contribute
-Contributions to this project are welcome. Here is how you can contribute:  
+### Team
+
+We thank the following contributor(s): **Josh Garverick** and **Mikael Krief**
+
+### Contributions are welcome
+
+Here is how you can contribute to this project:  
 
 - Submit bugs and help us verify fixes  
 - Submit pull requests for bug fixes and features and discuss existing proposals   
 
 Please refer to [Contribution guidelines](.github/CONTRIBUTING.md) and the [Code of Conduct](.github/COC.md) for more details.
 
-#Notices
+### Notices
+
 Building this solution will download other software, subject to the third party license terms that are between you and the third party.
 
 And npm dependencies list are :
@@ -107,4 +132,4 @@ The generated extensions needs these 3 rd libraries
 
 The DevOps assets folder contains scripts we have sourced from 3rd parties
 
-- [Set-PackageQuality.ps1, by René van Osnabrugge](https://roadtoalm.com/2017/01/16/programmatically-promote-your-package-quality-with-release-views-in-vsts/)
+- [Set-PackageQuality.ps1](https://roadtoalm.com/2017/01/16/programmatically-promote-your-package-quality-with-release-views-in-vsts/), by René van Osnabrugge

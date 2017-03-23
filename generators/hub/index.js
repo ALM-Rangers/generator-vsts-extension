@@ -1,4 +1,4 @@
-'use strict';
+﻿'use strict';
 const path = require('path');
 const util = require(`../app/utility`);
 var generators = require('yeoman-generator');
@@ -12,7 +12,7 @@ function construct() {
    this.argument('extName', { type: String, required: false, desc: 'Name of the extension' });
    this.argument('extId', { type: String, required: false, desc: 'Id of the extension' });
    this.argument('extDescription', { type: String, required: false, desc: 'Description of the extension' });
-   this.argument('yourPublisher', { type: String, required: false, desc: 'Your Marketplace publisher' });
+   this.argument('publisherId', { type: String, required: false, desc: 'Your Marketplace publisher ID' });
 
 }
 
@@ -55,12 +55,12 @@ function input() {
          }
       }, {
          type: 'input',
-         name: 'yourPublisher',
+         name: 'publisherId',
          store: true,
-         message: 'Please enter the name of your marketplace publisher ID:',
+         message: 'Please enter the name of your Marketplace Publisher ID:',
          default: 'fabrikam',
          when: answers => {
-            return cmdLnInput.yourPublisher === undefined;
+             return cmdLnInput.publisherId === undefined;
          }
       },
       {
@@ -218,7 +218,7 @@ function input() {
          this.extName = util.reconcileValue(answers.extName, cmdLnInput.extName);
          this.extId = util.reconcileValue(answers.extId, cmdLnInput.extId);
          this.extDescription = util.reconcileValue(answers.extDescription, cmdLnInput.extDescription);
-         this.yourPublisher = util.reconcileValue(answers.yourPublisher, cmdLnInput.yourPublisher);
+         this.publisherId = util.reconcileValue(answers.publisherId, cmdLnInput.publisherId);
          this.extensionType = util.reconcileValue(answers.extensionType, cmdLnInput.extensionType);
          this.hubPoint = util.reconcileValue(answers.hubPoint, cmdLnInput.hubPoint);
          this.menuPoint = util.reconcileValue(answers.menuPoint, cmdLnInput.menuPoint);
@@ -231,12 +231,11 @@ function writeFiles() {
 
    var tokens = {
       ExtensionName: this.extName,
-      yourPublisher: this.yourPublisher,
+      PublisherId: this.publisherId,
       ExtensionType: this.extensionType,
       TargetType: this.extensionType == 'ms.vss-web.hub' ? JSON.stringify(this.hubPoint) : JSON.stringify(this.menuPointType),
       Description: this.extDescription,
-      ExtensionID: this.extId,
-      yourAccount: this.yourAccount
+      ExtensionID: this.extId
    };
 
    var src = this.sourceRoot();
@@ -281,18 +280,18 @@ function writeFiles() {
       this.destinationPath(extensionFolder + '/vss-extension.json'), tokens
    );
    this.fs.copyTpl(
-      this.templatePath('marketplace/mp_terms.md'),
-      this.destinationPath(extensionFolder + '/marketplace/mp_terms.md')
+      this.templatePath('license.md'),
+      this.destinationPath(extensionFolder + '/license.md'), tokens
    );
 
    this.fs.copyTpl(
-      this.templatePath('marketplace/overview.md'),
-      this.destinationPath(extensionFolder + '/marketplace/overview.md'), tokens
+      this.templatePath('overview.md'),
+      this.destinationPath(extensionFolder + '/overview.md'), tokens
    );
 
    this.fs.copyTpl(
-      this.templatePath('marketplace/ThirdPartyNotices.txt'),
-      this.destinationPath(extensionFolder + '/marketplace/ThirdPartyNotices.txt')
+      this.templatePath('ThirdPartyNotices.txt'),
+      this.destinationPath(extensionFolder + '/ThirdPartyNotices.txt')
    );
 
    //Copy Tests folders

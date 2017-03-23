@@ -1,4 +1,4 @@
-'use strict';
+﻿'use strict';
 var path = require('path');
 const sinon = require(`sinon`);
 var assert = require('yeoman-assert');
@@ -18,7 +18,7 @@ describe('generator-vsts-ext:hub', function () {
             extName: "Test1",
             extId: "Test1",
             extDescription: "Description of the extension",
-            yourPublisher: "fabrikam",
+            publisherId: "fabrikam",
             extensionType: "ms.vss-web.hub",
             hubPoint: "ms.vss-code-web.code-hub-group",
             useVS: true
@@ -57,9 +57,9 @@ describe('generator-vsts-ext:hub', function () {
          root + 'static/images/logo.png',
          root + 'static/images/screen1.png',
          root + 'static/css/app.css',
-         root + 'marketplace/mp_terms.md',
-         root + 'marketplace/overview.md',
-         root + 'marketplace/ThirdPartyNotices.txt',
+         root + 'license.md',
+         root + 'overview.md',
+         root + 'ThirdPartyNotices.txt',
       ]);
       assert.fileContent(root + 'vss-extension.json', /"id": "Test1"/);
       assert.fileContent(root + 'vss-extension.json', /"name": "Test1"/)

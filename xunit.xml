@@ -1,0 +1,12 @@
+<testsuite name="Mocha Tests" tests="10" failures="0" errors="0" skipped="0" timestamp="2017-03-23T14:56:29" time="1.068">
+<testcase classname="generator-vsts-ext:hub" name="Extension directory should be created" time="0"/>
+<testcase classname="generator-vsts-ext:hub" name="creates files" time="0.004"/>
+<testcase classname="generator-vsts-ext:hub" name="npm install should be called" time="0"/>
+<testcase classname="generator-vsts-ext:hub" name="grunt copy should be called" time="0"/>
+<testcase classname="generator-vsts-ext:hub" name="grunt typescript should be called" time="0"/>
+<testcase classname="generator-vsts-ext:hub" name="grunt package should be called" time="0"/>
+<testcase classname="generator-vsts-ext:task" name="Extension directory should be created" time="0"/>
+<testcase classname="generator-vsts-ext:task" name="creates files" time="0"/>
+<testcase classname="generator-vsts-ext:task" name="npm install should be called" time="0.004"/>
+<testcase classname="generator-vsts-ext:task" name="grunt package should be called" time="0"/>
+</testsuite>

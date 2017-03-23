@@ -1,7 +1,15 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\generators",
+    "\\generators\\hub",
+    "\\generators\\hub\\templates",
+    "\\generators\\hub\\templates\\static\\images",
+    "\\generators\\taskitem",
+    "\\generators\\taskitem\\templates",
+    "\\test",
+    "\\tools"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\generators\\hub\\templates\\vss-extension.json",
   "PreviewInSolutionExplorer": false
 }

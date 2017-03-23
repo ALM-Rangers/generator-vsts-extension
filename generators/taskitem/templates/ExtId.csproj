@@ -42,9 +42,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="marketplace\ThirdPartyNotices.txt" />
-    <Content Include="marketplace\mp_terms.md" />
-    <Content Include="marketplace\overview.md" />
+
     
     <Content Include="static\images\logo.png" />
     <Content Include="static\images\Screen1.png" />
@@ -61,6 +59,9 @@
     <None Include="vss-extension.json" />
     <None Include="settings.tfx.json" />
     <None Include="gruntfile.js" />
+    <None Include="ThirdPartyNotices.txt" />
+    <None Include="license.md" />
+    <None Include="overview.md" />
    
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
