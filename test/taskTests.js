@@ -1,4 +1,4 @@
-'use strict';
+﻿'use strict';
 var path = require('path');
 const sinon = require(`sinon`);
 var assert = require('yeoman-assert');
@@ -18,7 +18,7 @@ describe('generator-vsts-ext:task', function () {
             extName: "TestextTask1",
             extId: "TestextTask1",
             extDescription: "Description of the task extension",
-            yourPublisher: "fabrikam",
+            publisherId: "fabrikam",
             taskName: "task1",
             friendlyName: "task 1",
             taskDescription : "Description of my task",
@@ -55,9 +55,9 @@ describe('generator-vsts-ext:task', function () {
          root + 'vss-extension.json',
          root + 'static/images/logo.png',
          root + 'static/images/screen1.png',
-         root + 'marketplace/mp_terms.md',
-         root + 'marketplace/overview.md',
-         root + 'marketplace/ThirdPartyNotices.txt',
+         root + 'license.md',
+         root + 'overview.md',
+         root + 'ThirdPartyNotices.txt',
          taskPath + "task1.ps1",
          taskPath + "task.json",
          taskPath + "icon.png"

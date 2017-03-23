@@ -1,106 +1,90 @@
-{
-   "manifestVersion": 1,
-   "id": "<%= ExtensionID %>",
-   "version": "0.1.0",
-   "name": "<%= ExtensionName %>",
-   "scopes": [
-      "vso.work",
-      "vso.work_write"
-   ],
-   "description": "<%= Description %>",
-   "publisher": "<%= yourPublisher %>",
-   "galleryFlags": [
-      "Preview"
-   ],
-   "icons": {
-      "default": "static/images/logo.png"
-   },
-   "targets": [
-      {
-         "id": "Microsoft.VisualStudio.Services"
-      }
-   ],
-   "demands": [
-      "api-version/3.0"
-   ],
-   "tags": [
-      "Sample"
-   ],
-   "screenshots": [
-      {
-         "path": "static/images/screen1.png"
-      }
-   ],
-   "content": {
-      "license": {
-         "path": "marketplace/mp_terms.md"
-      },
-      "details": {
-         "path": "marketplace/overview.md"
-      }
-   },
-   "links": {
-      "home": {
-         "uri": "https://bit.ly"
-      },
-      "getstarted": {
-         "uri": "https://bit.ly"
-      },
-      "learn": {
-         "uri": "https://bit.ly"
-      },
-      "support": {
-         "uri": "https://bit.ly"
-      },
-      "repository": {
-         "uri": "https://bit.ly"
-      },
-      "issues": {
-         "uri": "https://bit.ly"
-      }
-   },
-   "repository": {
-      "type": "git",
+﻿{
+  "manifestVersion": 1,
+  "id": "<%= ExtensionID %>",
+  "version": "0.1.0",
+  "name": "<%= ExtensionName %>",
+  "scopes": [],
+  "description": "<%= Description %>",
+  "publisher": "<%= PublisherId %>",
+  "galleryFlags": [
+    "Preview"
+  ],
+  "icons": {
+    "default": "static/images/logo.png"
+  },
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "demands": [
+    "api-version/3.0"
+  ],
+  "tags": [
+    "Sample"
+  ],
+  "screenshots": [
+    {
+      "path": "static/images/screen1.png"
+    }
+  ],
+  "content": {
+    "license": {
+      "path": "license.md"
+    },
+    "details": {
+      "path": "overview.md"
+    }
+  },
+  "links": {
+    "getstarted": {
       "uri": "https://bit.ly"
-   },
-   "branding": {
-      "color": "rgb(220, 235, 252)",
-      "theme": "light"
-   },
-   "files": [
-      {
-         "path": "marketplace",
-         "addressable": true
-      },
-      {
-         "path": "dist",
-         "addressable": true,
-         "packagePath": "/"
-      },
-      {
-         "path": "static",
-         "addressable": true,
-         "packagePath": "/"
-      },
-      {
-         "path": "node_modules/vss-web-extension-sdk/lib",
-         "addressable": true,
-         "packagePath": "lib"
+    },
+    "support": {
+      "uri": "https://bit.ly"
+    },
+    "issues": {
+      "uri": "https://bit.ly"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "uri": "https://bit.ly"
+  },
+  "branding": {
+    "color": "rgb(220, 235, 252)",
+    "theme": "light"
+  },
+  "files": [
+    {
+      "path": "dist",
+      "addressable": true,
+      "packagePath": "/"
+    },
+    {
+      "path": "static",
+      "addressable": true,
+      "packagePath": "/"
+    },
+    {
+      "path": "node_modules/vss-web-extension-sdk/lib",
+      "addressable": true,
+      "packagePath": "lib"
+    }
+  ],
+  "categories": [
+    "Integrate"
+  ],
+  "contributions": [
+    {
+      "id": "<%= ExtensionID %>",
+      "targets": <%- TargetType %>,
+      "type": "<%= ExtensionType %>",
+      "properties": {
+        "name": "<%= ExtensionName %>",
+        "order": 100,
+        "uri": "index.html"
       }
-   ],
-   "categories": [
-      "Integrate"
-   ],
-   "contributions": [
-      {
-         "id": "<%= ExtensionID %>",
-         "targets": <%- TargetType %>,
-         "type": "<%= ExtensionType %>",
-         "properties": {
-            "name": "<%= ExtensionName %>",
-            "order": 100,
-            "uri": "index.html"
-         }
-      }
-   ]
+    }
+  ]
 }

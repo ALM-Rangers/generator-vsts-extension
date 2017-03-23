@@ -1,15 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\generators\\app",
+    "\\generators",
     "\\generators\\hub",
     "\\generators\\hub\\templates",
-    "\\generators\\hub\\templates\\marketplace",
-    "\\generators\\hub\\templates\\src",
-    "\\generators\\hub\\templates\\src\\module",
-    "\\generators\\hub\\templates\\static",
-    "\\generators\\hub\\templates\\static\\css"
+    "\\generators\\hub\\templates\\static\\images",
+    "\\generators\\taskitem",
+    "\\generators\\taskitem\\templates",
+    "\\test",
+    "\\tools"
   ],
-  "SelectedNode": "\\generators",
+  "SelectedNode": "\\generators\\hub\\templates\\vss-extension.json",
   "PreviewInSolutionExplorer": false
 }
