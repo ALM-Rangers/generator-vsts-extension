@@ -1,12 +1,12 @@
-# Yeoman-extension-code-generator
+﻿# Yeoman-extension-code-generator
 
 >  Team Foundation Server and Team Services extension code generator.
 
-![VSTS](https://almrangers.visualstudio.com/_apis/public/build/definitions/7f3cfb9a-d1cb-4e66-9d36-1af87b906fe9/137/badge) | [![NPM](https://nodei.co/npm/generator-vsts-ext.png?mini=true)](https://www.npmjs.com/package/generator-vsts-ext)
+![VSTS](https://almrangers.visualstudio.com/_apis/public/build/definitions/7f3cfb9a-d1cb-4e66-9d36-1af87b906fe9/137/badge) | [![NPM](https://nodei.co/npm/generator-team-services-extension.png?mini=true)](https://www.npmjs.com/package/generator-team-services-extension)
 
 ## Capabilities
 
-Generator-vsts-ext is [Yeoman](http://yeoman.io/) generator that create an extension for Visual Studio Team Services or Team Foundation Server.
+**generator-team-services-extension** is [Yeoman](http://yeoman.io/) generator that create an extension for Visual Studio Team Services or Team Foundation Server.
 
 The extension type can be :
 - New hub extension
@@ -25,13 +25,13 @@ The extension type can be :
 First, install the generator
 
 ```bash
-npm install -g generator-vsts-ext
+npm install -g generator-team-services-extension
 ```
 
 Then generate your new extension project:
 
 ```bash
-yo vsts-ext
+yo team-services-extension
 ```
 
 ## Test this generator locally
