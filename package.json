@@ -1,6 +1,6 @@
 {
   "name": "generator-team-services-extension",
-  "version": "1.0.15",
+  "version": "1.0.19",
   "description": "Yeoman generator for Team Services and Team Foundation Server extensions",
   "homepage": "https://github.com/ALM-Rangers/generator-team-services-extension",
   "author": {
