@@ -1,7 +1,7 @@
 {
   "name": "generator-team-services-extension",
   "version": "1.0.15",
-  "description": "Team Foundation Server and Team Services extension code generator",
+  "description": "Yeoman generator for Team Services and Team Foundation Server extensions",
   "homepage": "https://github.com/ALM-Rangers/generator-team-services-extension",
   "author": {
     "name": "Visual Studio ALM Rangers"
