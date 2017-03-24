@@ -1,6 +1,4 @@
-﻿# Yeoman-extension-code-generator
-
->  Team Foundation Server and Team Services extension code generator.
+# Team Services extension code generator
 
 ![VSTS](https://almrangers.visualstudio.com/_apis/public/build/definitions/7f3cfb9a-d1cb-4e66-9d36-1af87b906fe9/137/badge) | [![NPM](https://nodei.co/npm/generator-team-services-extension.png?mini=true)](https://www.npmjs.com/package/generator-team-services-extension)
 
