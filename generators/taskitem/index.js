@@ -1,4 +1,4 @@
-'use strict';
+﻿'use strict';
 const path = require('path');
 const util = require(`../app/utility`);
 var generators = require('yeoman-generator');
@@ -53,12 +53,12 @@ function input() {
          }
       }, {
          type: 'input',
-         name: 'yourPublisher',
+         name: 'publisherId',
          store: true,
          message: 'Please enter the name of your marketplace publisher ID:',
          default: 'fabrikam',
          when: answers => {
-            return cmdLnInput.yourPublisher === undefined;
+             return cmdLnInput.publisherId === undefined;
          }
       },
 
@@ -123,7 +123,7 @@ function input() {
          this.extName = util.reconcileValue(a.extName, cmdLnInput.extName);
          this.extId = util.reconcileValue(a.extId, cmdLnInput.extId);
          this.extDescription = util.reconcileValue(a.extDescription, cmdLnInput.extDescription);
-         this.yourPublisher = util.reconcileValue(a.yourPublisher, cmdLnInput.yourPublisher);
+         this.publisherId = util.reconcileValue(a.publisherId, cmdLnInput.publisherId);
          this.taskName = util.reconcileValue(a.taskName, cmdLnInput.taskName);
          this.friendlyName = util.reconcileValue(a.friendlyName, cmdLnInput.friendlyName);
          this.taskDescription = util.reconcileValue(a.taskDescription, cmdLnInput.taskDescription);
@@ -140,7 +140,7 @@ function writeFiles() {
 
    var tokens = {
       ExtensionName: this.extName,
-      yourPublisher: this.yourPublisher,
+      PublisherId: this.publisherId,
       Description: this.extDescription,
       ExtensionID: this.extId,
       taskName: this.taskName,
@@ -201,18 +201,18 @@ function writeFiles() {
    );
 
    this.fs.copyTpl(
-      this.templatePath('marketplace/mp_terms.md'),
-      this.destinationPath(extensionFolder + '/marketplace/mp_terms.md')
+      this.templatePath('license.md'),
+      this.destinationPath(extensionFolder + '/license.md'), tokens
    );
 
    this.fs.copyTpl(
-      this.templatePath('marketplace/overview.md'),
-      this.destinationPath(extensionFolder + '/marketplace/overview.md'), tokens
+      this.templatePath('overview.md'),
+      this.destinationPath(extensionFolder + '/overview.md'), tokens
    );
 
    this.fs.copyTpl(
-      this.templatePath('marketplace/ThirdPartyNotices.txt'),
-      this.destinationPath(extensionFolder + '/marketplace/ThirdPartyNotices.txt')
+      this.templatePath('ThirdPartyNotices.txt'),
+      this.destinationPath(extensionFolder + '/ThirdPartyNotices.txt')
    );
 
    //Copy gitignore

@@ -1,6 +1,6 @@
 {
    "name": "generator-vsts-ext",
-   "version": "0.0.0",
+   "version": "1.0.0",
    "description": "Team Foundation Server and Team Services extension code generator",
    "homepage": "https://github.com/ALM-Rangers/Yeoman-extension-code-generator",
    "author": {

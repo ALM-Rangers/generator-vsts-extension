@@ -1,88 +1,79 @@
-{
-   "manifestVersion": 1,
-   "id": "<%= ExtensionID %>",
-   "version": "0.1.0",
-   "name": "<%= ExtensionName %>",
-   "scopes": [],
-   "description": "<%= Description %>",
-   "publisher": "<%= yourPublisher %>",
-   "galleryFlags": [
-      "Preview"
-   ],
-   "icons": {
-      "default": "static/images/logo.png"
-   },
-   "targets": [
-      {
-         "id": "Microsoft.VisualStudio.Services"
-      }
-   ],
-   "demands": [
-      "api-version/3.0"
-   ],
-   "tags": [
-      "Sample"
-   ],
-   "screenshots": [
-      {
-         "path": "static/images/screen1.png"
-      }
-   ],
-   "content": {
-      "license": {
-         "path": "marketplace/mp_terms.md"
-      },
-      "details": {
-         "path": "marketplace/overview.md"
-      }
-   },
-   "links": {
-      "home": {
-         "uri": "https://bit.ly"
-      },
-      "getstarted": {
-         "uri": "https://bit.ly"
-      },
-      "learn": {
-         "uri": "https://bit.ly"
-      },
-      "support": {
-         "uri": "https://bit.ly"
-      },
-      "repository": {
-         "uri": "https://bit.ly"
-      },
-      "issues": {
-         "uri": "https://bit.ly"
-      }
-   },
-   "repository": {
-      "type": "git",
+﻿{
+  "manifestVersion": 1,
+  "id": "<%= ExtensionID %>",
+  "version": "0.1.0",
+  "name": "<%= ExtensionName %>",
+  "scopes": [],
+  "description": "<%= Description %>",
+  "publisher": "<%= PublisherId %>",
+  "galleryFlags": [
+    "Preview"
+  ],
+  "icons": {
+    "default": "static/images/logo.png"
+  },
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "demands": [
+    "api-version/3.0"
+  ],
+  "tags": [
+    "Sample"
+  ],
+  "screenshots": [
+    {
+      "path": "static/images/screen1.png"
+    }
+  ],
+  "content": {
+    "license": {
+      "path": "license.md"
+    },
+    "details": {
+      "path": "overview.md"
+    }
+  },
+  "links": {
+    "getstarted": {
       "uri": "https://bit.ly"
-   },
-   "branding": {
-      "color": "rgb(220, 235, 252)",
-      "theme": "light"
-   },
-   "files": [
-        {
-         "path": "<%= taskName %>",
-         "addressable": true
+    },
+    "support": {
+      "uri": "https://bit.ly"
+    },
+    "issues": {
+      "uri": "https://bit.ly"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "uri": "https://bit.ly"
+  },
+  "branding": {
+    "color": "rgb(220, 235, 252)",
+    "theme": "light"
+  },
+  "files": [
+    {
+      "path": "<%= taskName %>",
+      "addressable": true
+    }
+  ],
+  "categories": [
+    "Build and release"
+  ],
+  "contributions": [
+    {
+      "id": "<%= taskName %>",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "type": "ms.vss-distributed-task.task",
+      "properties": {
+        "name": "<%= taskName %>"
       }
-   ],
-   "categories": [
-      "Build and release"
-   ],
-   "contributions": [
-      {
-         "id": "<%= taskName %>",
-         "targets": [
-            "ms.vss-distributed-task.tasks"
-         ],
-         "type": "ms.vss-distributed-task.task",
-         "properties": {
-            "name": "<%= taskName %>"
-         }
-      }
-   ]
+    }
+  ]
 }
