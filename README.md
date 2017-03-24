@@ -4,7 +4,7 @@
 
 ## Capabilities
 
-**generator-team-services-extension** is [Yeoman](http://yeoman.io/) generator that create an extension for Visual Studio Team Services or Team Foundation Server.
+**generator-team-services-extension** is a [Yeoman](http://yeoman.io/) generator that creates an extension for Visual Studio Team Services or Team Foundation Server.
 
 The extension type can be :
 - New hub extension
