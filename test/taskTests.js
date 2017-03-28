@@ -7,7 +7,7 @@ var crypto = require('crypto');
 var promise;
 var spawnStub;
 
-describe('generator-vsts-ext:task', function () {
+describe('generator-team-services-extension:task', function () {
 
    var testPath = path.join(__dirname, '../TestsResults/'+crypto.randomBytes(20).toString('hex'));
    console.log(testPath);

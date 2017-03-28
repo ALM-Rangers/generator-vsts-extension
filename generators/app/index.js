@@ -1,4 +1,4 @@
-// This is the main entry point of the generator.  The heavy lifting is done in the
+﻿// This is the main entry point of the generator.  The heavy lifting is done in the
 // sub generator vsts.  I separated them so I could compose with language generators.
 const url = require('url');
 const util = require('./utility');
@@ -22,7 +22,7 @@ function construct() {
 // sub generators. I also use this to determine which data I still need to
 // prompt for.
 function init() {
-   this.log(yosay('Welcome to the astounding ' + chalk.red('generator-vsts-ext') + ' generator!\n' + 'v.' + this.rootGeneratorVersion()));
+    this.log(yosay('Welcome to Team Services Extensions\n' + 'v.' + this.rootGeneratorVersion()));
 
 }
 
@@ -68,9 +68,9 @@ function input() {
 // Based on the users answers compose all the required generators.
 function configGenerators() {
    if (this.type === 'hub') {
-      this.composeWith('vsts-ext:hub');
+       this.composeWith('team-services-extension:hub');
    } else if (this.type === 'taskitem') {
-      this.composeWith('vsts-ext:taskitem');
+       this.composeWith('team-services-extension:taskitem');
    }
 
 }
