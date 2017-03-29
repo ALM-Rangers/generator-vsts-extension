@@ -2,4 +2,4 @@
 coverage
 TestsResults
 .vs
-.github
+xunit.xml

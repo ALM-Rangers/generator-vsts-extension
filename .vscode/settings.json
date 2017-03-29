@@ -1,3 +1,9 @@
 {
-    "vsicons.presets.angular": false
+    "vsicons.presets.angular": false,
+    // Configure glob patterns for excluding files and folders.
+    "files.exclude": {
+        "**/.github": true,
+        "**/TestsResults": true,
+        "**/xunit.xml": true
+    }
 }
