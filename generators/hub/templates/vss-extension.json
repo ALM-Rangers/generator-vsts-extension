@@ -58,13 +58,19 @@
   "files": [
     {
       "path": "dist",
-      "addressable": true,
-      "packagePath": "/"
+      "addressable": true
     },
     {
-      "path": "static",
-      "addressable": true,
-      "packagePath": "/"
+      "path": "static/images/logo.png",
+      "addressable": true
+    },
+    {
+      "path": "static/css/app.css",
+      "addressable": true
+    },
+    {
+      "path": "static/index.html",
+      "addressable": true
     },
     {
       "path": "node_modules/vss-web-extension-sdk/lib",
@@ -83,7 +89,7 @@
       "properties": {
         "name": "<%= ExtensionName %>",
         "order": 100,
-        "uri": "index.html"
+        "uri": "static/index.html"
       }
     }
   ]

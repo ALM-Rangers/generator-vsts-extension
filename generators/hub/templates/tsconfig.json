@@ -10,6 +10,6 @@
     ]
   },
   "files": [
-    "src/module/app.ts"
+    "src/app.ts"
   ]
 }
