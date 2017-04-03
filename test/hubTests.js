@@ -48,11 +48,10 @@ describe('generator-team-services-extension:hub', function () {
          root + 'Test1.csproj',
          root + 'typings.json',
          root + 'package.json',
-         root + 'settings.tfx.json',
          root + 'vss-extension.json',
          root + 'test/TestSpec.js',
          root + '.vscode/tasks.json',
-         root + 'src/module/app.ts',
+         root + 'src/app.ts',
          root + 'static/index.html',
          root + 'static/images/logo.png',
          root + 'static/images/screen1.png',
@@ -74,16 +73,10 @@ describe('generator-team-services-extension:hub', function () {
       assert.equal(1, spawnStub.withArgs(`npm`, [`install`], { stdio: ['pipe', 'pipe', process.stderr] }).callCount, `npm install was not be called`);
    });
 
-   it(`grunt copy should be called`, () => {
-      assert.equal(1, spawnStub.withArgs(`grunt`, [`copy`], { stdio: ['pipe', 'pipe', process.stderr] }).callCount, `grunt copy was not be called`);
+   it(`npm run build should be called`, () => {
+      assert.equal(1, spawnStub.withArgs(`npm`, [`run`,'build'], { stdio: ['pipe', 'pipe', process.stderr] }).callCount, `npm run build was not be called`);
    });
 
-   it(`grunt typescript should be called`, () => {
-      assert.equal(1, spawnStub.withArgs(`grunt`, ['exec:typescriptCompile'], { stdio: ['pipe', 'pipe', process.stderr] }).callCount, `grunt typescriptCompile was not be called`);
-   });
 
-   it(`grunt package should be called`, () => {
-      assert.equal(1, spawnStub.withArgs(`grunt`, ['exec:package'], { stdio: ['pipe', 'pipe', process.stderr] }).callCount, `grunt package was not be called`);
-   });
 
 });

@@ -52,11 +52,10 @@
     <None Include="typings.json" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="src\module\app.ts" />
+    <TypeScriptCompile Include="src\app.ts" />
   </ItemGroup>
   <ItemGroup>
     <None Include="vss-extension.json" />
-    <None Include="settings.tfx.json" />
     <None Include="gruntfile.js" />
     <None Include="tsconfig.json" />
     <None Include="ThirdPartyNotices.txt" />

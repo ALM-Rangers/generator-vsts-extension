@@ -57,8 +57,6 @@
  
   <ItemGroup>
     <None Include="vss-extension.json" />
-    <None Include="settings.tfx.json" />
-    <None Include="gruntfile.js" />
     <None Include="ThirdPartyNotices.txt" />
     <None Include="license.md" />
     <None Include="overview.md" />

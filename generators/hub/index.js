@@ -321,12 +321,7 @@ function writeFiles() {
       tokens
    );
 
-   this.fs.copyTpl(
-      this.templatePath('settings.tfx.json'),
-      this.destinationPath(extensionFolder + '/settings.tfx.json'), tokens
-   );
-
-   this.fs.copyTpl(
+     this.fs.copyTpl(
       this.templatePath('gruntfile.js'),
       this.destinationPath(extensionFolder + '/gruntfile.js')
    );
@@ -368,14 +363,13 @@ function install() {
    // I don't want to see the output of this command
    this.spawnCommandSync('npm', ['install'], { stdio: ['pipe', 'pipe', process.stderr] });
 
-   this.log(`+ Running grunt copy`);
-   this.spawnCommandSync('grunt', ['copy'], { stdio: ['pipe', 'pipe', process.stderr] });
+   //this.log(`+ Running grunt copy`);
+   //this.spawnCommandSync('grunt', ['copy'], { stdio: ['pipe', 'pipe', process.stderr] });
 
-   this.log(`+ Running grunt for compile typescript and create package for vsix generating`);
+   this.log(`+ Running npm build for compile typescript and create package for vsix generating`);
    process.chdir(that.destinationRoot() + "\\" + extensionFolder);
-   this.spawnCommandSync('grunt', ['exec:typescriptCompile'], { stdio: ['pipe', 'pipe', process.stderr] });
-   this.spawnCommandSync('grunt', ['exec:package'], { stdio: ['pipe', 'pipe', process.stderr] });
-
+   this.spawnCommandSync('npm', ['run', 'build'], { stdio: ['pipe', 'pipe', process.stderr] });
+  
    done();
    this.log(`Done`);
 }
