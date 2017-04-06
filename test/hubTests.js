@@ -16,7 +16,7 @@ describe('generator-team-services-extension:hub', function () {
          .inDir(testPath)
          .withPrompts({
             extName: "Test1",
-            extId: "Test1",
+            extId: "TestId1",
             extDescription: "Description of the extension",
             publisherId: "fabrikam",
             extensionType: "ms.vss-web.hub",
@@ -34,7 +34,7 @@ describe('generator-team-services-extension:hub', function () {
    });
 
    it('Extension directory should be created', function () {
-      assert.file(testPath + '/Test1/');
+      assert.file(testPath + '/TestId1/');
    });
 
 
@@ -42,10 +42,10 @@ describe('generator-team-services-extension:hub', function () {
 
 
    it('creates files', () => {
-      var root = testPath + '\\Test1\\Test1\\';
+      var root = testPath + '\\TestId1\\TestId1\\';
       assert.file([
          root + 'gruntfile.js',
-         root + 'Test1.csproj',
+         root + 'TestId1.csproj',
          root + 'typings.json',
          root + 'package.json',
          root + 'vss-extension.json',
@@ -60,7 +60,7 @@ describe('generator-team-services-extension:hub', function () {
          root + 'overview.md',
          root + 'ThirdPartyNotices.txt',
       ]);
-      assert.fileContent(root + 'vss-extension.json', /"id": "Test1"/);
+      assert.fileContent(root + 'vss-extension.json', /"id": "TestId1"/);
       assert.fileContent(root + 'vss-extension.json', /"name": "Test1"/)
       assert.fileContent(root + 'vss-extension.json', /"type": "ms.vss-web.hub"/)
 

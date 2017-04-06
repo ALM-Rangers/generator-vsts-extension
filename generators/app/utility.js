@@ -54,7 +54,14 @@ function validateTaskType(input) {
 }
 
 function validateTaskVisibility(input) {
-   return validateRequired(input, `You must provide a type for your task`);
+   return validateRequired(input, `You must provide a visibility for your task`);
+}
+
+function validateWidgetId(input) {
+   return validateRequired(input, `You must provide an Id for your widget`);
+}
+function validateWidgetFriendlyName(input) {
+   return validateRequired(input, `You must provide a friendly name for your widget`);
 }
 
 function getHubPoint() {
