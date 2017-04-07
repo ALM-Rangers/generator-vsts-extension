@@ -1,6 +1,8 @@
 ﻿node_modules
 coverage
 TestsResults
+.vs
+.github
 /.vs/
 /.github/
 **/*.sqlite
