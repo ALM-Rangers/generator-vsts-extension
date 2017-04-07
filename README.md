@@ -9,6 +9,7 @@
 The extension type can be :
 - New hub extension
 - Custom build or release task
+- Widget dashboard
 
 ## Requirements
 
@@ -46,7 +47,7 @@ npm link
 - on the generator folder run this command
 
 ```bash
-gulp test
+mocha test
 ```
 
 ## Getting started
@@ -63,6 +64,7 @@ Take a look at the information on getting started with extensions, RESTful APIs,
 - [RESTful API Library](https://www.visualstudio.com/en-us/docs/integrate/api/overview)
 - [SDK](https://github.com/Microsoft/vss-web-extension-sdk)
 - [VSTS Marketplace](https://marketplace.visualstudio.com/VSTS)
+- [Samples](https://github.com/Microsoft/vsts-extension-samples)
 
 ### Yeoman
 
