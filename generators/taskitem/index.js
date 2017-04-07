@@ -65,7 +65,7 @@ function input() {
       {
          type: 'input',
          name: 'taskName',
-         message: 'Please enter the name of your task:',
+         message: 'Please enter the name (Id) of your task:',
          store: true,
          default: 'MyTask',
          validate: util.validateTaskName,
@@ -152,8 +152,8 @@ function writeFiles() {
    }
 
    var src = this.sourceRoot();
-   var root = this.extName;
-   var extensionFolder = root + "/" + this.extName
+   var root = this.extId;
+   var extensionFolder = root + "/" + this.extId
    if(!this.useVS){
       extensionFolder = root
    }
@@ -209,26 +209,26 @@ function writeFiles() {
    //Copy gitignore
    this.fs.copyTpl(
          this.templatePath('file.gitignore'),
-         this.destinationPath(this.extName  + '/' +'.gitignore')
+         this.destinationPath(this.extId  + '/' +'.gitignore')
    );
 
    if (this.useVS) {
       this.fs.copyTpl(
          this.templatePath('extId.csproj'),
-         this.destinationPath(extensionFolder + '/' + this.extName + '.csproj'), tokens
+         this.destinationPath(extensionFolder + '/' + this.extId + '.csproj'), tokens
       );
 
 
       this.fs.copyTpl(
          this.templatePath('extId.sln'),
-         this.destinationPath(this.extName + '/' + this.extName + '.sln'), tokens
+         this.destinationPath(this.extId + '/' + this.extId + '.sln'), tokens
       );
 
    }
 }
 
 function install() {
-   var npmdir = process.cwd() + '/' + this.extName;
+   var npmdir = process.cwd() + '/' + this.extId;
    process.chdir(npmdir);
    console.log(JSON.stringify(this.taskScope));
    this.installDependencies();
@@ -239,9 +239,9 @@ function install() {
 
    var done = this.async();
    var that = this;
-   var extensionFolder = this.extName + "/" + this.extName
+   var extensionFolder = this.extId + "/" + this.extId
     if(!this.useVS){
-      extensionFolder = this.extName
+      extensionFolder = this.extId
    }
 
    process.chdir(`${extensionFolder}`);

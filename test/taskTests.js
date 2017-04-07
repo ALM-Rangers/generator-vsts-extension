@@ -16,10 +16,10 @@ describe('generator-team-services-extension:task', function () {
          .inDir(testPath)
          .withPrompts({
             extName: "TestextTask1",
-            extId: "TestextTask1",
+            extId: "TestextTaskId1",
             extDescription: "Description of the task extension",
             publisherId: "fabrikam",
-            taskName: "task1",
+            taskName: "taskName1",
             friendlyName: "task 1",
             taskDescription : "Description of my task",
             taskType : "Deploy",
@@ -37,7 +37,7 @@ describe('generator-team-services-extension:task', function () {
    });
 
    it('Extension directory should be created', function () {
-      assert.file(testPath + '/TestextTask1/');
+      assert.file(testPath + '/TestextTaskId1/');
    });
 
 
@@ -45,10 +45,10 @@ describe('generator-team-services-extension:task', function () {
 
 
    it('creates files', () => {
-      var root = testPath + '\\TestextTask1\\TestextTask1\\';
-      var taskPath = root + "task1\\"
+      var root = testPath + '\\TestextTaskId1\\TestextTaskId1\\';
+      var taskPath = root + "taskName1\\"
       assert.file([
-         root + 'TestextTask1.csproj',
+         root + 'TestextTaskId1.csproj',
          root + 'package.json',
          root + 'vss-extension.json',
          root + 'static/images/logo.png',
@@ -56,11 +56,11 @@ describe('generator-team-services-extension:task', function () {
          root + 'license.md',
          root + 'overview.md',
          root + 'ThirdPartyNotices.txt',
-         taskPath + "task1.ps1",
+         taskPath + "taskName1.ps1",
          taskPath + "task.json",
          taskPath + "icon.png"
       ]);
-      assert.fileContent(root + 'vss-extension.json', /"id": "TestextTask1"/);
+      assert.fileContent(root + 'vss-extension.json', /"id": "TestextTaskId1"/);
       assert.fileContent(root + 'vss-extension.json', /"name": "TestextTask1"/)
 
 

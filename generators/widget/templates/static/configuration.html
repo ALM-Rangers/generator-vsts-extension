@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <link href="css/app.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="widget-configuration">
+        <div class="dropdown" id="query-path-dropdown">
+            <label class="label">Query: </label>
+            <div class="wrapper">
+                <select id="query-path">						
+						<option value="Shared Queries/Feedback">Shared Queries/Feedback</option>
+						<option value="Shared Queries/Current Sprint/Work in Progress">Shared Queries/Current Sprint/Work in Progress</option>
+						<option value="Shared Queries/Current Sprint/Test Cases">hared Queries/Current Sprint/Test Cases</option>											
+					</select>
+            </div>
+        </div>
+
+
+
+    </div>
+    <script src="../lib/VSS.SDK.min.js"></script>
+    <script type="text/javascript">
+        VSS.init({
+            explicitNotifyLoaded: true,
+            setupModuleLoader: true,
+            usePlatformScripts: true,
+            usePlatformStyles: true
+        });
+
+        VSS.ready(function () {
+            VSS.require(["../dist/configuration"], function (configuration) { });
+        });
+    </script>
+</body>
+
+</html>

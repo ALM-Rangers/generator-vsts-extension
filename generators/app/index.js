@@ -51,6 +51,10 @@ function input() {
             {
                name: 'Build/Release custom Task',
                value: 'taskitem'
+            },
+            {
+               name: 'Widget dashboard',
+               value: 'widget'
             }
          ],
          when: function () {
@@ -71,6 +75,8 @@ function configGenerators() {
        this.composeWith('team-services-extension:hub');
    } else if (this.type === 'taskitem') {
        this.composeWith('team-services-extension:taskitem');
+   } else if (this.type === 'widget') {
+       this.composeWith('team-services-extension:widget');
    }
 
 }

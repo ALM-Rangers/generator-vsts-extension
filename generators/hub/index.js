@@ -239,8 +239,8 @@ function writeFiles() {
    };
 
    var src = this.sourceRoot();
-   var root = this.extName;
-   var extensionFolder = root + "/" + this.extName
+   var root = this.extId;
+   var extensionFolder = root + "/" + this.extId
    if(!this.useVS){
       extensionFolder = root
    }
@@ -334,13 +334,13 @@ function writeFiles() {
    if (this.useVS) {
       this.fs.copyTpl(
          this.templatePath('extId.csproj'),
-         this.destinationPath(extensionFolder + '/' + this.extName + '.csproj')
+         this.destinationPath(extensionFolder + '/' + this.extId + '.csproj')
       );
 
 
       this.fs.copyTpl(
          this.templatePath('extId.sln'),
-         this.destinationPath(root + '/' + this.extName + '.sln'), tokens
+         this.destinationPath(root + '/' + this.extId + '.sln'), tokens
       );
 
    }
@@ -352,9 +352,9 @@ function install() {
 
    var done = this.async();
    var that = this;
-   var extensionFolder = this.extName + "/" + this.extName
+   var extensionFolder = this.extId + "/" + this.extId
    if(!this.useVS){
-      extensionFolder = this.extName
+      extensionFolder = this.extId
    }
 
    process.chdir(`${extensionFolder}`);
@@ -362,9 +362,6 @@ function install() {
 
    // I don't want to see the output of this command
    this.spawnCommandSync('npm', ['install'], { stdio: ['pipe', 'pipe', process.stderr] });
-
-   //this.log(`+ Running grunt copy`);
-   //this.spawnCommandSync('grunt', ['copy'], { stdio: ['pipe', 'pipe', process.stderr] });
 
    this.log(`+ Running npm build for compile typescript and create package for vsix generating`);
    process.chdir(that.destinationRoot() + "\\" + extensionFolder);

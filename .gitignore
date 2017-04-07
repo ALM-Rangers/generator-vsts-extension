@@ -3,3 +3,6 @@ coverage
 TestsResults
 .vs
 .github
+/.vs/
+/.github/
+**/*.sqlite
