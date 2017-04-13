@@ -1,8 +1,8 @@
-# Team Services extension code generator
+./# Team Services extension code generator
 
 ![VSTS](https://almrangers.visualstudio.com/_apis/public/build/definitions/7f3cfb9a-d1cb-4e66-9d36-1af87b906fe9/137/badge) | [![NPM](https://nodei.co/npm/generator-team-services-extension.png?mini=true)](https://www.npmjs.com/package/generator-team-services-extension)
 
-![Gears](gears.png) Read {Set up a CI/CD pipeline for your Yeoman generator package](https://blogs.msdn.microsoft.com/visualstudioalmrangers/2017/04/12/set-up-a-cicd-pipeline-for-your-yeoman-generator-package/) if you're interested in how the [Visual Studio Team Service3s](https://www.visualstudio.com/team-services/) based CI/CD pipeline builds and delivers this generator behind the scenes. 
+![Gears](Gears.png) Read [Set up a CI/CD pipeline for your Yeoman generator package](https://blogs.msdn.microsoft.com/visualstudioalmrangers/2017/04/12/set-up-a-cicd-pipeline-for-your-yeoman-generator-package/) if you're interested in how the [Visual Studio Team Service3s](https://www.visualstudio.com/team-services/) based CI/CD pipeline builds and delivers this generator behind the scenes. 
 
 ## Capabilities
 
