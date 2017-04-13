@@ -2,7 +2,9 @@
 
 ![VSTS](https://almrangers.visualstudio.com/_apis/public/build/definitions/7f3cfb9a-d1cb-4e66-9d36-1af87b906fe9/137/badge) | [![NPM](https://nodei.co/npm/generator-team-services-extension.png?mini=true)](https://www.npmjs.com/package/generator-team-services-extension)
 
-> ![Gears](Gears.png) Interested how our CI/CD pipeline works behind the scenes? Read [Set up a CI/CD pipeline for your Yeoman generator package](https://blogs.msdn.microsoft.com/visualstudioalmrangers/2017/04/12/set-up-a-cicd-pipeline-for-your-yeoman-generator-package/) to learn more. 
+> ![Gears](Gears.png) Interested how our CI/CD pipeline works behind the scenes? 
+>
+> Read [Set up a CI/CD pipeline for your Yeoman generator package](https://blogs.msdn.microsoft.com/visualstudioalmrangers/2017/04/12/set-up-a-cicd-pipeline-for-your-yeoman-generator-package/) to learn more. 
 
 ## Capabilities
 
