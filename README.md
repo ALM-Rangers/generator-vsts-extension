@@ -17,9 +17,10 @@ The extension type can be :
 
 - [Node.js](http://nodejs.org/) with [NPM](https://www.npmjs.com/), Minimum version 6.9.5 LTS (https://nodejs.org/)
 - [Yeoman](http://yeoman.io/) : npm install -g yo
-- [Grunt](https://www.npmjs.com/package/grunt) : npm install -g grunt
 - [Tfx-cli](https://www.npmjs.com/package/tfx-cli) : npm install -g tfx-cli
 - [typescript (necessary for new hub extension)](https://www.npmjs.com/package/typescript) : npm install -g typescript
+- [tslint](https://www.npmjs.com/package/tslint)  : npm install -g tslint
+- [webpack](https://www.npmjs.com/package/webpack) : npm install -g webpack
 
 ## Installation
 
@@ -133,7 +134,6 @@ The generated extensions needs these 3 rd libraries
 - [tslint](https://www.npmjs.com/package/tslint)
 - [tslint-loader](https://www.npmjs.com/package/tslint-loader)
 - [webpack](https://www.npmjs.com/package/webpack)
-- [webpack-dev-server"](https://www.npmjs.com/package/webpack-dev-server)
 
 The DevOps assets folder contains scripts we have sourced from 3rd parties
 
