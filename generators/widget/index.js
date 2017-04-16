@@ -213,14 +213,20 @@ function writeFiles() {
             tokens
       );
 
-      this.fs.copyTpl(
-            this.templatePath('gruntfile.js'),
-            this.destinationPath(extensionFolder + '/gruntfile.js')
-      );
 
       this.fs.copyTpl(
             this.templatePath('typings.json'),
             this.destinationPath(extensionFolder + '/typings.json')
+      );
+
+      this.fs.copyTpl(
+            this.templatePath('webpack.config.js'),
+            this.destinationPath(extensionFolder + '/webpack.config.js')
+      );
+
+      this.fs.copyTpl(
+            this.templatePath('tslint.json'),
+            this.destinationPath(extensionFolder + '/tslint.json')
       );
 
       if (this.useVS) {

@@ -56,7 +56,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="vss-extension.json" />
-    <None Include="gruntfile.js" />
+    <None Include="webpack.config.js" />
+    <None Include="tslint.json" />
     <None Include="tsconfig.json" />
     <None Include="ThirdPartyNotices.txt" />
     <None Include="license.md" />

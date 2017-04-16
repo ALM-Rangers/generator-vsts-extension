@@ -125,12 +125,15 @@ And npm dependencies list are :
 The generated extensions needs these 3 rd libraries
 
 - [applicationinsights-js](https://www.npmjs.com/package/applicationinsights-js)
-- [grunt-contrib-copy](https://www.npmjs.com/package/grunt-contrib-copy)
-- [grunt-contrib-jasmine](https://www.npmjs.com/package/grunt-contrib-jasmine)
-- [grunt-exec](https://www.npmjs.com/package/grunt-exec)
-- [jasmine](https://www.npmjs.com/package/jasmine)
 - [rimraf](https://www.npmjs.com/package/rimraf)
 - [tfx-cli](https://www.npmjs.com/package/tfx-cli)
+
+- [cpx](https://www.npmjs.com/package/cpx)
+- [ts-loader](https://www.npmjs.com/package/ts-loader)
+- [tslint](https://www.npmjs.com/package/tslint)
+- [tslint-loader](https://www.npmjs.com/package/tslint-loader)
+- [webpack](https://www.npmjs.com/package/webpack)
+- [webpack-dev-server"](https://www.npmjs.com/package/webpack-dev-server)
 
 The DevOps assets folder contains scripts we have sourced from 3rd parties
 
