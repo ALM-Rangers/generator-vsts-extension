@@ -5,10 +5,7 @@
     "clean": "rimraf ./dist && rimraf ./*.vsix"
   },
   "devDependencies": {
-    "grunt": "^1.0.0",
-    "grunt-contrib-copy": "*",
-    "grunt-exec": "*",
-    "tfx-cli": "^0.3.45"
+    "tfx-cli": "^0.4.5"
   },
   "dependencies": {
     "@types/jquery": "^2.0.34",
