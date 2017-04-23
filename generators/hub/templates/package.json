@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "npm run lint && npm run clean && mkdir dist && webpack --progress --colors --config webpack.config.js --output-path ./dist -p",
+    "build": "npm run lint && npm run clean && webpack --progress --colors --config webpack.config.js --output-path ./dist -p",
     "postbuild": "npm run package",
     "package": "tfx extension create  --rev-version",
     "gallery-publish": "tfx extension publish --rev-version",
