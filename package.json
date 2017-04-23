@@ -21,7 +21,8 @@
   "files": [
     "generators/app",
     "generators/hub",
-    "generators/taskitem"
+    "generators/taskitem",
+    "generators/widget"
   ],
   "main": "generators/index.js",
   "keywords": [
@@ -46,18 +47,10 @@
     "yeoman-assert": "*",
     "eslint": "^3.1.1",
     "eslint-config-xo-space": "^0.15.0",
-    "gulp": "^3.9.0",
-    "gulp-eslint": "^3.0.1",
     "jshint": "^2.9.4",
-    "gulp-jshint": "^2.0.4",
-    "gulp-istanbul": "^1.0.0",
-    "gulp-mocha": "^3.0.1",
-    "gulp-spawn-mocha": "^3.1.0",
-    "gulp-plumber": "^1.0.0",
-    "gulp-nsp": "^2.1.0",
     "uuid": "*",
     "fs-extra": "^0.30.0",
-    "istanbul": "*",
+    "istanbul": "^0.4.5",
     "mocha": "^3.1.2",
     "sinon": "*",
     "typescript": "^2.1.4",
@@ -73,6 +66,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "test": "istanbul cover --report cobertura --report html node_modules/mocha/bin/_mocha -- -R xunit-file"
+    "test": "istanbul cover --report cobertura --report html node_modules/mocha/bin/_mocha -- -R xunit-file",
+    "snyk:test":"snyk test"
   }
 }

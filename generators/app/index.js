@@ -14,7 +14,7 @@ function construct() {
    // Order is important
    // These are position based arguments for this generator. If they are not provided
    // via the command line they will be queried during the prompting priority
-   this.argument('type', { type: String, required: false, desc: 'Extension type to create (hub, taskitem or widgetitem)' });
+   this.argument('type', { type: String, required: false, desc: 'Extension type to create (hub, taskitem or widget)' });
 }
 
 

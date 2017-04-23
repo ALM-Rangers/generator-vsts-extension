@@ -4,12 +4,18 @@
     "moduleResolution": "node",
     "target": "es5",
     "rootDir": "src/",
-    "outDir": "dist/",
+    "sourceMap": true,
     "types": [
       "vss-web-extension-sdk"
-    ]
+    ],
+    "lib": [
+            "dom",
+            "es5",
+            "es2015.promise"
+        ]
   },
-  "files": [
-    "src/app.ts"
+  "exclude": [
+    "node_modules",
+    "typings"
   ]
 }

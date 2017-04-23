@@ -15,7 +15,7 @@
     </div>
 
 
-    <script src="../lib/VSS.SDK.js"></script>
+    <script src="../lib/VSS.SDK.min.js"></script>
     <script type="text/javascript">
         // Initialize the VSS sdk
         VSS.init({
@@ -27,8 +27,7 @@
 
         // Wait for the SDK to be initialized
         VSS.ready(function () {
-            VSS.require(["../dist/main"], function (app) { });
-
+            VSS.require(["../dist/main"], function (app) {});
         });
     </script>
 </body>

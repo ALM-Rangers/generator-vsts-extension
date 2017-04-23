@@ -45,7 +45,6 @@ describe('generator-team-services-extension:widget', function () {
       it('creates files', () => {
             var root = testPath + '\\TestId1\\TestId1\\';
             assert.file([
-                  root + 'gruntfile.js',
                   root + 'TestId1.csproj',
                   root + 'typings.json',
                   root + 'package.json',
@@ -62,6 +61,8 @@ describe('generator-team-services-extension:widget', function () {
                   root + 'license.md',
                   root + 'overview.md',
                   root + 'ThirdPartyNotices.txt',
+                  root + 'webpack.config.js',
+                  root + 'tslint.json'
             ]);
             assert.fileContent(root + 'vss-extension.json', /"id": "TestId1"/);
             assert.fileContent(root + 'vss-extension.json', /"name": "Test1"/);
