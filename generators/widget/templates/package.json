@@ -1,20 +1,22 @@
 {
   "scripts": {
-    "build": "tsc -p .",
+    "build": "npm run lint && npm run clean && webpack --progress --colors --config webpack.config.js --output-path ./dist -p",
+    "build:dev": "tsc -p .",
     "postbuild": "npm run package",
     "package": "tfx extension create  --rev-version",
     "gallery-publish": "tfx extension publish --rev-version",
-    "clean": "rimraf ./dist && rimraf ./*.vsix"
+    "clean": "rimraf ./dist && rimraf ./*.vsix",
+    "lint": "tslint -c tslint.json \"src/*.ts"
   },
   "devDependencies": {
-    "grunt": "^1.0.0",
-    "grunt-contrib-copy": "*",
-    "grunt-contrib-jasmine": "*",
-    "grunt-exec": "*",
-    "jasmine": "^2.5.1",
     "rimraf": "^2.5.4",
     "tfx-cli": "^0.3.45",
-    "typescript": "^2.1.4"
+    "typescript": "^2.1.4",
+    "cpx": "^1.5.0",
+    "ts-loader": "^2.0.0",
+    "tslint": "^4.3.1",
+    "tslint-loader": "^3.3.0",
+    "webpack": "^1.14.0"
   },
   "dependencies": {
     "@types/jquery": "^2.0.34",

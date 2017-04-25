@@ -17,9 +17,6 @@ The extension type can be :
 
 - [Node.js](http://nodejs.org/) with [NPM](https://www.npmjs.com/), Minimum version 6.9.5 LTS (https://nodejs.org/)
 - [Yeoman](http://yeoman.io/) : npm install -g yo
-- [Grunt](https://www.npmjs.com/package/grunt) : npm install -g grunt
-- [Tfx-cli](https://www.npmjs.com/package/tfx-cli) : npm install -g tfx-cli
-- [typescript (necessary for new hub extension)](https://www.npmjs.com/package/typescript) : npm install -g typescript
 
 ## Installation
 
@@ -100,14 +97,6 @@ And npm dependencies list are :
 - [eslint](https://www.npmjs.com/package/eslint)
 - [eslint-config-xo-space](https://www.npmjs.com/package/eslint-config-xo-space)
 - [fs-extra](https://www.npmjs.com/package/fs-extra)
-- [gulp](https://www.npmjs.com/package/gulp)
-- [gulp-eslint](https://www.npmjs.com/package/gulp-eslint)
-- [gulp-istanbul](https://www.npmjs.com/package/gulp-istanbul)
-- [gulp-jshint](https://www.npmjs.com/package/gulp-jshint)
-- [gulp-mocha](https://www.npmjs.com/package/gulp-mocha)
-- [gulp-nsp](https://www.npmjs.com/package/gulp-nsp)
-- [gulp-plumber](https://www.npmjs.com/package/gulp-plumber)
-- [gulp-spawn-mocha](https://www.npmjs.com/package/gulp-spawn-mocha)
 - [Istanbul](https://www.npmjs.com/package/istanbul)
 - [jshint](https://www.npmjs.com/package/jshint)
 - [Mocha](https://www.npmjs.com/package/mocha)
@@ -125,12 +114,14 @@ And npm dependencies list are :
 The generated extensions needs these 3 rd libraries
 
 - [applicationinsights-js](https://www.npmjs.com/package/applicationinsights-js)
-- [grunt-contrib-copy](https://www.npmjs.com/package/grunt-contrib-copy)
-- [grunt-contrib-jasmine](https://www.npmjs.com/package/grunt-contrib-jasmine)
-- [grunt-exec](https://www.npmjs.com/package/grunt-exec)
-- [jasmine](https://www.npmjs.com/package/jasmine)
 - [rimraf](https://www.npmjs.com/package/rimraf)
 - [tfx-cli](https://www.npmjs.com/package/tfx-cli)
+- [cpx](https://www.npmjs.com/package/cpx)
+- [ts-loader](https://www.npmjs.com/package/ts-loader)
+- [Typescript](https://www.npmjs.com/package/typescript)
+- [tslint](https://www.npmjs.com/package/tslint)
+- [tslint-loader](https://www.npmjs.com/package/tslint-loader)
+- [webpack](https://www.npmjs.com/package/webpack)
 
 The DevOps assets folder contains scripts we have sourced from 3rd parties
 
