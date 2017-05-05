@@ -111,6 +111,16 @@ function input() {
          }
       },
       {
+         type: 'list',
+         name: 'taskScripting',
+         message: 'Please select the scripting type for your task:',
+         choices: ["PowerShell", "TypeScript"],
+         validate: util.validateTaskVisibility,
+         when: answers => {
+            return cmdLnInput.taskScripting === undefined;
+         }
+      },
+      {
          type: 'confirm',
          name: 'useVS',
          store: true,
