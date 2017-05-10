@@ -23,6 +23,9 @@
   "tags": [
     "Sample"
   ],
+  "categories": [
+    "Build and release"
+  ],
   "screenshots": [
     {
       "path": "static/images/screen1.png"
@@ -57,12 +60,8 @@
   },
   "files": [
     {
-      "path": "<%= taskName %>",
-      "addressable": true
+      "path": "<%= taskName %>"
     }
-  ],
-  "categories": [
-    "Build and release"
   ],
   "contributions": [
     {

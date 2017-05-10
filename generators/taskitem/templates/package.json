@@ -1,17 +1,16 @@
 {
   "scripts": {
-    "package": "tfx extension create  --rev-version",
+    "package": "npm run clean <%-commandCompile%> && tfx extension create  --rev-version",
     "gallery-publish": "tfx extension publish --rev-version",
-    "clean": "rimraf ./dist && rimraf ./*.vsix"
+    "clean": "rimraf ./*.vsix",
+    "compile": "tsc -p .",
+    "install-task-lib" : "cd <%-taskName%> && npm install --save-dev"
   },
   "devDependencies": {
-    "tfx-cli": "^0.4.5"
+    "tfx-cli": "^0.4.5",
+    "typescript": "^2.3.2"
   },
-  "dependencies": {
-    "@types/jquery": "^2.0.34",
-    "@types/q": "0.0.32"
-  },
-  "name": "",
+  "name": "packagetask",
   "private": true,
-  "version": "0.0.0"
+  "version": "0.0.1"
 }
