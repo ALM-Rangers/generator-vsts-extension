@@ -286,8 +286,7 @@ function install() {
       this.spawnCommandSync('npm', ['install'], { stdio: ['pipe', 'pipe', process.stderr] });
 
       this.log(`+ Running npm run package for vsix generating`);
-      process.chdir(that.destinationRoot() + "\\" + extensionFolder);
-
+     
       if (this.taskScripting == "TypeScript") {
             this.spawnCommandSync('npm', ['run', 'install-task-lib'], { stdio: ['pipe', 'pipe', process.stderr] });
       }
