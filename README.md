@@ -12,6 +12,7 @@ The extension type can be :
 - New hub extension
 - Custom build or release task
 - Widget dashboard
+- Service Hooks Consumer
 
 ## Requirements
 
