@@ -55,10 +55,6 @@ function input() {
             {
                name: 'Widget dashboard',
                value: 'widget'
-            },
-            {
-                name: 'Service hook',
-                value: 'servicehook'
             }
          ],
          when: function () {
@@ -81,9 +77,6 @@ function configGenerators() {
        this.composeWith('team-services-extension:taskitem');
    } else if (this.type === 'widget') {
        this.composeWith('team-services-extension:widget');
-   }
-   else if(this.type =='servicehook'){
-       this.composeWith('team-services-extension:servicehook');
    }
 
 }
