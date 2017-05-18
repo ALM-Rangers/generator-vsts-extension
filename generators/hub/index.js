@@ -369,7 +369,7 @@ function install() {
       this.spawnCommandSync('npm', ['install'], { stdio: ['pipe', 'pipe', process.stderr] });
 
       this.log(`+ Running npm build for compile typescript and create package for vsix generating`);
-      process.chdir(that.destinationRoot() + "\\" + extensionFolder);
+      
       this.spawnCommandSync('npm', ['run', 'build'], { stdio: ['pipe', 'pipe', process.stderr] });
 
       done();

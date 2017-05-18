@@ -7,7 +7,7 @@ var crypto = require('crypto');
 var promise;
 var spawnStub;
 
-describe('generator-team-services-extension:hub', function () {
+describe('generator-team-services-extension-hub', function () {
 
    var testPath = path.join(__dirname, '../TestsResults/' + crypto.randomBytes(20).toString('hex'));
    console.log(testPath);
@@ -33,15 +33,12 @@ describe('generator-team-services-extension:hub', function () {
          });
    });
 
-   it('Extension directory should be created', function () {
+   it('generator-team-services-extension-hub:Extension directory should be created', function () {
       assert.file(testPath + '/TestId1/');
    });
 
 
-
-
-
-   it('creates files', () => {
+   it('generator-team-services-extension-hub:creates files', () => {
       var root = testPath + '\\TestId1\\TestId1\\';
       assert.file([
          root + 'TestId1.csproj',
@@ -65,19 +62,14 @@ describe('generator-team-services-extension:hub', function () {
       assert.fileContent(root + 'vss-extension.json', /"name": "Test1"/)
       assert.fileContent(root + 'vss-extension.json', /"type": "ms.vss-web.hub"/)
 
-
-
-
    })
 
-   it(`npm install should be called`, () => {
+   it(`generator-team-services-extension-hub:npm install should be called`, () => {
       assert.equal(1, spawnStub.withArgs(`npm`, [`install`], { stdio: ['pipe', 'pipe', process.stderr] }).callCount, `npm install was not be called`);
    });
 
-   it(`npm run build should be called`, () => {
+   it(`generator-team-services-extension-hub:npm run build should be called`, () => {
       assert.equal(1, spawnStub.withArgs(`npm`, [`run`,'build'], { stdio: ['pipe', 'pipe', process.stderr] }).callCount, `npm run build was not be called`);
    });
-
-
 
 });

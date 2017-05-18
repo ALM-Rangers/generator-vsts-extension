@@ -1,0 +1,13 @@
+{
+  "name": "task",
+  "version": "1.0.0",
+  "description": "package.json for task lib",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@types/node": "^7.0.18",
+    "@types/q": "0.0.32",
+    "vsts-task-lib": "^1.1.0"
+  }
+}

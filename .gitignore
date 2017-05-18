@@ -6,3 +6,4 @@ TestsResults
 /.vs/
 /.github/
 **/*.sqlite
+xunit.xml

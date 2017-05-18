@@ -41,6 +41,33 @@ Use [npm link](https://docs.npmjs.com/cli/link)
 ```bash
 npm link
 ```
+## Debug this generator using [Visual Studio Code](https://code.visualstudio.com/)
+- Click **Debug** in the VS Code **Activity Bar**
+- Click Configure (gear icon right to Configuration dropdown)
+- Select **Node.js**
+- From the configuration dropdown click **Add Configuration** 
+- Popup will show with a list of available configruations, select **Node.js: Yeoman generator**
+- Change **args** value to generator name: **team-services-extension**
+
+The final configuration should looks like below 
+
+{    
+    "version": "0.2.0",
+    
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Yeoman generator",
+            "program": "${workspaceRoot}/node_modules/yo/lib/cli.js",
+            "args": [
+                "team-services-extension"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
+        }
+    ]
+}
 
 ## Execute Unit Tests
 - on the generator folder run this command

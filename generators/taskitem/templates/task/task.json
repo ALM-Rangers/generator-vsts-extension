@@ -31,11 +31,7 @@
       }
    ],
    "instanceNameFormat": "<%= taskName %>",
-   "execution": {
-      "PowerShell3": {
-         "target": "$(currentDirectory)\\<%= taskName %>.ps1",
-         "argumentFormat": "",
-         "workingDirectory": "$(currentDirectory)"
-      }
-   }
+   "execution":
+    <%-jsonTaskScript%>
+   
 }
