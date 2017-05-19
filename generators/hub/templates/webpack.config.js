@@ -14,37 +14,24 @@ module.exports = {
         /^VSS\/.*/, /^TFS\/.*/, /^q$/
     ],
     resolve: {
-        extensions: [
-            "",
-            ".webpack.js",
-            ".web.js",
-            ".ts",
-            ".tsx",
-            ".js"],
-        root: [
-            path.resolve("./src")
-        ]
+        extensions: ["*",".webpack.js", ".web.js", ".ts", ".tsx", ".js"],
+        modules: [path.resolve("./src"),"node_modules"]
     },
     module: {
-        preLoaders: [
+        rules: [
             {
                 test: /\.tsx?$/,
-                loader: "tslint"
-            }
-        ],
-        loaders: [
+                enforce: "pre",
+                loader: "tslint-loader",
+                options: {
+                    emitErrors: true,
+                    failOnHint: true
+                }
+            },
             {
                 test: /\.tsx?$/,
                 loader: "ts-loader"
-            },
-            {
-                test: /\.s?css$/,
-                loaders: ["style", "css", "sass"]
             }
         ]
-    },
-    tslint: {
-        emitErrors: true,
-        failOnHint: true
     }
 }

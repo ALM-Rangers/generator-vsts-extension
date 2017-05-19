@@ -207,11 +207,38 @@ function input() {
             },
             {
                   type: 'confirm',
+                  name: 'useAITelemetry',
+                  store: true,
+                  message: 'Do you intend to use Application Insight telemetry ?',
+                  when: answers => {
+                        return cmdLnInput.useAITelemetry === undefined;
+                  }
+            },
+            {
+                  type: 'confirm',
+                  name: 'setAIkey',
+                  store: true,
+                  message: 'Do you want to configure this extension with your Application Insight Instrumentation key ?',
+                  when: answers => {
+                        return answers.useAITelemetry === true;
+                  }
+            },
+            {
+                  type: 'input',
+                  name: 'AIkey',
+                  store: true,
+                  message: 'Please enter your Application Insight Instrumentation Key:',
+                  when: answers => {
+                        return answers.setAIkey === true;
+                  }
+            },
+            {
+                  type: 'confirm',
                   name: 'useVS',
                   store: true,
                   message: 'Do you intend to use Visual Studio ?',
                   when: answers => {
-                        return cmdLnInput.useVS === undefined;
+                        return answers.useVS === undefined;
                   }
             }]).then(function (answers) {
                   // Transfer answers to local object for use in the rest of the generator
@@ -223,6 +250,11 @@ function input() {
                   this.hubPoint = util.reconcileValue(answers.hubPoint, cmdLnInput.hubPoint);
                   this.menuPoint = util.reconcileValue(answers.menuPoint, cmdLnInput.menuPoint);
                   this.menuPointType = util.reconcileValue(answers.menuPointType, cmdLnInput.menuPointType);
+                  // Application Insight Telemetry
+                  this.useAITelemetry = util.reconcileValue(answers.useAITelemetry, cmdLnInput.useAITelemetry);
+                  this.setAIkey = util.reconcileValue(answers.setAIkey, cmdLnInput.setAIkey);
+                  this.AIkey = util.reconcileValue(answers.AIkey, cmdLnInput.AIkey);
+                  // ----------------------------
                   this.useVS = util.reconcileValue(answers.useVS, cmdLnInput.useVS);
             }.bind(this));
 }
@@ -235,7 +267,9 @@ function writeFiles() {
             ExtensionType: this.extensionType,
             TargetType: this.extensionType == 'ms.vss-web.hub' ? JSON.stringify(this.hubPoint) : JSON.stringify(this.menuPointType),
             Description: this.extDescription,
-            ExtensionID: this.extId
+            ExtensionID: this.extId,
+            UseAITelemetry: this.useAITelemetry,
+            InstrumentationKey: this.setAIkey == true ? this.AIkey : "__InstrumentationKey__"
       };
 
       var src = this.sourceRoot();
@@ -259,21 +293,32 @@ function writeFiles() {
       );
 
       //Copy all assets for the extension
+      this.fs.copyTpl(
+            this.templatePath('src/app.ts'),
+            this.destinationPath(extensionFolder + '/src/app.ts'), tokens
+      );
+
+      if (this.useAITelemetry) {
+            this.fs.copyTpl(
+                  this.templatePath('src/telemetryClientSettings.ts'),
+                  this.destinationPath(extensionFolder + '/src/telemetryClientSettings.ts'), tokens
+            );
+      }
+
       this.fs.copy(
-            this.templatePath('src/**/*'),
-            this.destinationPath(extensionFolder + '/src/')
+            this.templatePath('static/images/*'),
+            this.destinationPath(extensionFolder + '/static/images/')
       );
 
       this.fs.copy(
-            this.templatePath('static/**/*'),
-            this.destinationPath(extensionFolder + '/static/')
+            this.templatePath('static/css/*'),
+            this.destinationPath(extensionFolder + '/static/css/')
       );
 
-      this.fs.copy(
-            this.templatePath('css/**/*'),
-            this.destinationPath(extensionFolder + '/css/')
+      this.fs.copyTpl(
+            this.templatePath('static/index.html'),
+            this.destinationPath(extensionFolder + '/static/index.html'), tokens
       );
-
 
       this.fs.copyTpl(
             this.templatePath('vss-extension.json'),
@@ -347,9 +392,7 @@ function writeFiles() {
                   this.templatePath('extId.sln'),
                   this.destinationPath(root + '/' + this.extId + '.sln'), tokens
             );
-
       }
-
 }
 
 
@@ -368,8 +411,8 @@ function install() {
       // I don't want to see the output of this command
       this.spawnCommandSync('npm', ['install'], { stdio: ['pipe', 'pipe', process.stderr] });
 
-      this.log(`+ Running npm build for compile typescript and create package for vsix generating`);
-      
+      this.log(`+ Running npm build for transpile typescript and create package for vsix generating`);
+
       this.spawnCommandSync('npm', ['run', 'build'], { stdio: ['pipe', 'pipe', process.stderr] });
 
       done();

@@ -1,5 +1,9 @@
-﻿VSS.require(["TFS/Dashboards/WidgetHelpers", "TFS/WorkItemTracking/RestClient"], function (WidgetHelpers, TFS_Wit_WebApi) {
-        WidgetHelpers.IncludeWidgetStyles();
+﻿<% if (UseAITelemetry) { %>
+    import * as tc from "telemetryclient-team-services-extension";
+    import telemetryClientSettings = require("./telemetryClientSettings");
+<% } %>
+        VSS.require(["TFS/Dashboards/WidgetHelpers", "TFS/WorkItemTracking/RestClient"], function (WidgetHelpers, TFS_Wit_WebApi) {
+            WidgetHelpers.IncludeWidgetStyles();
             VSS.register("<%= WidgetId %>", function () {
                 const projectId = VSS.getWebContext().project.id;
                 const getQueryInfo = function (widgetSettings) {
@@ -18,7 +22,7 @@
                             const $list = $("<ul>");
                             $list.append($("<li>").text("Query Id: " + query.id));
                             $list.append($("<li>").text("Query Name: " + query.name));
-                            $list.append($("<li>").text("Created By: " + (query.createdBy ? query.createdBy.displayName : "<unknown>") ));
+                            $list.append($("<li>").text("Created By: " + (query.createdBy ? query.createdBy.displayName : "<unknown>")));
                             // Append the list to the query-info-container
                             const $container = $("#query-info-container");
                             $container.empty();
@@ -31,7 +35,10 @@
                         });
                 };
                 return {
-                    load: function (widgetSettings) {
+                    load: function (widgetSettings){
+<% if (UseAITelemetry) { %>
+tc.TelemetryClient.getClient(telemetryClientSettings.settings).trackPageView("<%= WidgetId %>.Index");
+<% } %>
                         // Set your title
                         const $title = $("h2.title");
                         $title.text(widgetSettings.name);

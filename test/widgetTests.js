@@ -22,6 +22,7 @@ describe('generator-team-services-extension-widget', function () {
                         widgetId: "widgetid1",
                         widgetFriendlyName: "widget 1",
                         widgetDescription: "Description of my widget",
+                        useAITelemetry: true,
                         useVS: true
                   })
                   .on(`error`, e => {
@@ -50,6 +51,7 @@ describe('generator-team-services-extension-widget', function () {
                   root + '.vscode/tasks.json',
                   root + 'src/main.ts',
                   root + 'src/configuration.ts',
+                  root + 'src/telemetryClientSettings.ts',
                   root + 'static/index.html',
                   root + 'static/configuration.html',
                   root + 'static/images/logo.png',
