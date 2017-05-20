@@ -108,21 +108,20 @@ function setJsonTaskScript(scriptMode, taskname) {
 }
 
 function setEventsText(eventsList) {
-      
-            var jsonproperty = {
-            "id":"performAction",
-            "name":"PerformAction",
-            "description":"Posts a standard event payload",
+      var jsonproperty = {
+            "id": "performAction",
+            "name": "PerformAction",
+            "description": "Posts a standard event payload",
             "supportedEventTypes": [
             ],
             "publishEvent": {
-              "url": "{{{url}}}",
-              "resourceDetailsToSend": "all",
-              "messagesToSend": "all",
-              "detailedMessagesToSend": "all"
+                  "url": "{{{url}}}",
+                  "resourceDetailsToSend": "all",
+                  "messagesToSend": "all",
+                  "detailedMessagesToSend": "all"
             }
       }
-      var stringArray= new Array();
+      var stringArray = new Array();
       eventsList.forEach(function (entry) {
             jsonproperty.supportedEventTypes.push(entry);
       });
@@ -145,8 +144,8 @@ module.exports = {
       validateTaskFiendlyName: validateTaskFiendlyName,
       validateTaskType: validateTaskType,
       validateTaskVisibility: validateTaskVisibility,
-      validateTaskScripting :validateTaskScripting,
+      validateTaskScripting: validateTaskScripting,
       getHubPoint: getHubPoint,
       setJsonTaskScript: setJsonTaskScript,
-      setEventsText:setEventsText
+      setEventsText: setEventsText
 };

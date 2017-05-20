@@ -36,7 +36,7 @@ function input() {
                   type: 'input',
                   name: 'extId',
                   store: true,
-                  message: 'Please enter the ID of your extension:',
+                  message: 'Please enter an ID of your extension:',
                   default: 'myextension',
                   validate: util.validateExtensionId,
                   when: answers => {
@@ -55,7 +55,7 @@ function input() {
                   type: 'input',
                   name: 'publisherId',
                   store: true,
-                  message: 'Please enter the name of your marketplace publisher ID:',
+                  message: 'Please enter the name of your Marketplace publisher ID:',
                   default: 'fabrikam',
                   when: answers => {
                         return cmdLnInput.publisherId === undefined;

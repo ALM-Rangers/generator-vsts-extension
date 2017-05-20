@@ -57,7 +57,7 @@ function input() {
                value: 'widget'
             },
             {
-                name: 'Service hook',
+                name: 'Service hooks consumer',
                 value: 'servicehook'
             }
          ],
