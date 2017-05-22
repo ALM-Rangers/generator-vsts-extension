@@ -5,10 +5,9 @@
     "clean": "rimraf ./*.vsix"
   },
   "devDependencies": {
-    "tfx-cli": "^0.4.5",
-    "typescript": "^2.3.2"
+    "tfx-cli": "^0.4.5"
   },
-  "name": "packagetask",
+  "name": "packagesh",
   "private": true,
   "version": "0.0.1"
 }

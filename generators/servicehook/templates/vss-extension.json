@@ -24,7 +24,7 @@
     "Sample"
   ],
   "categories": [
-    "Build and release"
+    "Integrate"
   ],
   "screenshots": [
     {
@@ -60,15 +60,15 @@
   },
   "contributions": [
     {
-      "id": "<%= connsumername %>",
+      "id": "<%= consumername %>",
       "type": "ms.vss-servicehooks.consumer",
       "targets": [
         "ms.vss-servicehooks.consumers"
       ],
       "properties": {
-        "id": "<%= connsumername %>",
-        "name": "Sample Consumer",
-        "description": "Sample consumer service",
+        "id": "<%= consumername %>",
+        "name": "<%= friendlyName %>",
+        "description": "<%= ServiceDescription %>",
         "informationUrl": "https://aka.ms/vsoextensions",
         "inputDescriptors": [
           {

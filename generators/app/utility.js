@@ -68,6 +68,14 @@ function validateWidgetFriendlyName(input) {
       return validateRequired(input, `You must provide a friendly name for your widget`);
 }
 
+
+function validateServiceHookName(input) {
+      return validateRequired(input, `You must provide a name for your service hook`);
+}
+function validateServiceHookFiendlyName(input) {
+      return validateRequired(input, `You must provide a friendly name for your service hook`);
+}
+
 function getHubPoint() {
       return [
             { name: 'Home', value: setHubPoint('ms.vss-web.home-hub-group') },
@@ -108,6 +116,7 @@ function setJsonTaskScript(scriptMode, taskname) {
 }
 
 function setEventsText(eventsList) {
+      
       var jsonproperty = {
             "id": "performAction",
             "name": "PerformAction",
@@ -145,6 +154,7 @@ module.exports = {
       validateTaskType: validateTaskType,
       validateTaskVisibility: validateTaskVisibility,
       validateTaskScripting: validateTaskScripting,
+      validateServiceHookName: validateServiceHookName,
       getHubPoint: getHubPoint,
       setJsonTaskScript: setJsonTaskScript,
       setEventsText: setEventsText

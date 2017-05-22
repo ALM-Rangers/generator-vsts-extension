@@ -6,23 +6,13 @@
   "author": {
     "name": "Visual Studio ALM Rangers"
   },
-  "contributors": [
-    {
-      "name": "Josh Garverick",
-      "email": "jgarverick@outlook.com",
-      "url": "http://joshgarverick.blogspot.com"
-    },
-    {
-      "name": "Mikael Krief",
-      "email": "krief_mikael@hotmail.com",
-      "url": "http://www.mikaelkrief.com"
-    }
-  ],
   "files": [
     "generators/app",
     "generators/hub",
     "generators/taskitem",
-    "generators/widget"
+    "generators/widget",
+    "generators/servicehook"
+
   ],
   "main": "generators/index.js",
   "keywords": [
@@ -31,7 +21,9 @@
     "extension",
     "task",
     "widget",
-    "yeoman-generator"
+    "service hook",
+    "yeoman-generator",
+    "application insight"
   ],
   "repository": {
     "type": "git",
