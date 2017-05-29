@@ -209,7 +209,7 @@ function input() {
                   type: 'confirm',
                   name: 'useAITelemetry',
                   store: true,
-                  message: 'Do you intend to use Application Insight telemetry ?',
+                  message: 'Do you intend to use Application Insights telemetry ?',
                   when: answers => {
                         return cmdLnInput.useAITelemetry === undefined;
                   }
@@ -218,7 +218,7 @@ function input() {
                   type: 'confirm',
                   name: 'setAIkey',
                   store: true,
-                  message: 'Do you want to configure this extension with your Application Insight Instrumentation key ?',
+                  message: 'Do you want to configure this extension with your Application Insights Instrumentation key ?',
                   when: answers => {
                         return answers.useAITelemetry === true;
                   }
@@ -227,7 +227,7 @@ function input() {
                   type: 'input',
                   name: 'AIkey',
                   store: true,
-                  message: 'Please enter your Application Insight Instrumentation Key:',
+                  message: 'Please enter your Application Insights Instrumentation Key:',
                   when: answers => {
                         return answers.setAIkey === true;
                   }

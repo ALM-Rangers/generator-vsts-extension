@@ -18,7 +18,7 @@ The extension type can be :
 
 - [Node.js](http://nodejs.org/) with [NPM](https://www.npmjs.com/), Minimum version 6.9.5 LTS (https://nodejs.org/)
 - [Yeoman](http://yeoman.io/) : npm install -g yo
-- (Optional) Microsoft Azure subscription for monitoring with application insight
+- (Optional) Microsoft Azure subscription for monitoring with Application Insights
 
 ## Installation
 
@@ -77,7 +77,7 @@ The final configuration should looks like below
 - on the generator folder run this command
 
 ```bash
-mocha test
+npm run test
 ```
 
 ## Getting started
