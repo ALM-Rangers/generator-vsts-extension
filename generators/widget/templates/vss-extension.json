@@ -81,6 +81,11 @@
       "addressable": true,
       "packagePath": "lib"
     }
+    <% if (UseAITelemetry) { %>,{
+      "path": "node_modules/applicationinsights-js/dist",
+      "addressable": true,
+      "packagePath": "lib"
+    }<% } %>
   ],
   "categories": [
     "Integrate"

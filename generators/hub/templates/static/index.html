@@ -6,6 +6,7 @@
     <title>TypeScript HTML App</title>
     <link rel="stylesheet" href="css/app.css" type="text/css" />
     <script src="../lib/VSS.SDK.min.js"></script>
+    <% if (UseAITelemetry) { %><script src="../lib/ai.0.js"></script><% } %>
 </head>
 <body>
     <script type="text/javascript">
@@ -17,7 +18,7 @@
 
         // Wait for the SDK to be initialized
         VSS.ready(function () {
-            VSS.require(["../dist/app"], function (app) {});
+            VSS.require(["dist/app"], function (app) {});
         });
     </script>
 

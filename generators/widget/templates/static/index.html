@@ -7,15 +7,13 @@
 </head>
 
 <body>
-
     <div class="widget">
         <h2 class="title">
             </h1>
             <div id="query-info-container"></div>
     </div>
-
-
     <script src="../lib/VSS.SDK.min.js"></script>
+    <% if (UseAITelemetry) { %><script src="../lib/ai.0.js"></script><% } %>
     <script type="text/javascript">
         // Initialize the VSS sdk
         VSS.init({
@@ -27,7 +25,7 @@
 
         // Wait for the SDK to be initialized
         VSS.ready(function () {
-            VSS.require(["../dist/main"], function (app) {});
+            VSS.require(["dist/main"], function (app) {});
         });
     </script>
 </body>

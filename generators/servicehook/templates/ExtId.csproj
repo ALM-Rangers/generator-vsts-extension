@@ -47,10 +47,6 @@
     <Content Include="static\images\logo.png" />
     <Content Include="static\images\Screen1.png" />
 
-    <Content Include="<%= taskName %>\icon.png" />
-    <Content Include="<%= taskName %>\task.json" />
-    <Content Include="<%= taskName %>\<%= taskName %>.ps1" />
-
      <None Include="package.json" />
     
   </ItemGroup>
