@@ -107,7 +107,7 @@ Take a look at the information on getting started with extensions, RESTful APIs,
 
 ### Team
 
-We thank the following contributor(s): **Josh Garverick** and **Mikael Krief**
+We thank the following contributor(s): **Josh Garverick** , **Mikael Krief** and **Hosam Kamel**
 
 ### Contributions are welcome
 
