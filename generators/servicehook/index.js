@@ -64,21 +64,21 @@ function input() {
 
             {
                   type: 'input',
-                  name: 'connsumername',
+                  name: 'consumername',
                   message: 'Please enter the consumer name (Id) of your service hooks:',
                   store: true,
                   default: 'consumer',
-                  validate: util.validateTaskName,
+                  validate: util.validateServiceHookName,
                   when: answers => {
-                        return cmdLnInput.taskName === undefined;
+                        return cmdLnInput.consumername === undefined;
                   }
             }, {
                   type: 'input',
                   name: 'friendlyName',
                   message: 'Please enter the friendly (display) name of your consumer service:',
                   store: true,
-                  default: 'My Task',
-                  validate: util.validateTaskFiendlyName,
+                  default: 'My service hook consumer',
+                  validate: util.validateServiceHookFiendlyName,
                   when: answers => {
                         return cmdLnInput.friendlyName === undefined;
                   }
@@ -87,9 +87,9 @@ function input() {
                   name: 'serviceDescription',
                   message: 'Please enter a description for your consumer service:',
                   store: true,
-                  default: 'My Task makes tasks great again',
+                  default: 'My service hook makes tasks great again',
                   when: answers => {
-                        return cmdLnInput.taskDescription === undefined;
+                        return cmdLnInput.serviceDescription === undefined;
                   }
             },
             {
@@ -119,7 +119,7 @@ function input() {
                   this.extId = util.reconcileValue(a.extId, cmdLnInput.extId);
                   this.extDescription = util.reconcileValue(a.extDescription, cmdLnInput.extDescription);
                   this.publisherId = util.reconcileValue(a.publisherId, cmdLnInput.publisherId);
-                  this.connsumername = util.reconcileValue(a.connsumername, cmdLnInput.connsumername);
+                  this.consumername = util.reconcileValue(a.consumername, cmdLnInput.consumername);
                   this.friendlyName = util.reconcileValue(a.friendlyName, cmdLnInput.friendlyName);
                   this.events = util.reconcileValue(a.events, cmdLnInput.events);
                   this.serviceDescription = util.reconcileValue(a.serviceDescription, cmdLnInput.serviceDescription);
@@ -129,17 +129,16 @@ function input() {
 
 
 function writeFiles() {
-
       var tokens = {
             ExtensionName: this.extName,
             PublisherId: this.publisherId,
             Description: this.extDescription,
             ExtensionID: this.extId,
-            connsumername: this.connsumername,
+            consumername: this.consumername,
             events: util.setEventsText(this.events).normalize(),
-            guid: uuid(),
             taskDescription: this.taskDescription,
-            friendlyName: this.friendlyName
+            friendlyName: this.friendlyName,
+            ServiceDescription: this.serviceDescription
       }
 
       var src = this.sourceRoot();
@@ -222,6 +221,7 @@ function install() {
       process.chdir(`${extensionFolder}`);
       this.log(`+ Running npm install on ${extensionFolder}`);
 
+      this.spawnCommandSync('npm', ['install'], { stdio: ['pipe', 'pipe', process.stderr] });
 
       this.log(`+ Running npm run package for vsix generating`);
 

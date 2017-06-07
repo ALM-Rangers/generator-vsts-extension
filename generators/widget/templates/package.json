@@ -1,28 +1,31 @@
 {
   "scripts": {
-    "build": "npm run lint && npm run clean && webpack --progress --colors --config webpack.config.js --output-path ./dist -p",
-    "build:dev": "tsc -p .",
+    "build": "npm run lint && npm run clean && npm run webpack",
+    "webpack" : "webpack --progress --colors --config webpack.config.js --output-path ./dist -p",
     "postbuild": "npm run package",
     "package": "tfx extension create  --rev-version",
     "gallery-publish": "tfx extension publish --rev-version",
     "clean": "rimraf ./dist && rimraf ./*.vsix",
-    "lint": "tslint -c tslint.json \"src/*.ts"
+    "lint": "tslint -c tslint.json 'src/*.ts'"
   },
   "devDependencies": {
-    "rimraf": "^2.5.4",
-    "tfx-cli": "^0.3.45",
-    "typescript": "^2.1.4",
+    "rimraf": "^2.6.1",
+    "tfx-cli": "^0.4.5",
+    "typescript": "^2.3.2",
     "cpx": "^1.5.0",
     "ts-loader": "^2.0.0",
-    "tslint": "^4.3.1",
-    "tslint-loader": "^3.3.0",
-    "webpack": "^1.14.0"
+    "tslint": "^5.2.0",
+    "tslint-loader": "^3.5.3",
+    "webpack": "^2.5.1"
   },
   "dependencies": {
     "@types/jquery": "^2.0.34",
     "@types/q": "0.0.32",
-    "vss-web-extension-sdk": "^2.109.1",
-    "applicationinsights-js": "*"
+    "vss-web-extension-sdk": "^2.116.1"
+    <% if (UseAITelemetry){ %>,
+      "applicationinsights-js": "^1.0.9",
+      "telemetryclient-team-services-extension": "*"
+    <% } %>
   },
   "name": "",
   "private": true,

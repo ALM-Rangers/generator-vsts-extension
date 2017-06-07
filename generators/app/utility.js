@@ -9,10 +9,10 @@ function validateRequired(input, msg) {
 
 function validateExtensionId(input) {
       if (!input) {
-            return `You must provide a id for your extension`
+            return `You must provide an Id for your extension`
       } else {
             if (input.indexOf(' ') >= 0) {
-                  return `The extension Id not containt space`;
+                  return `The extension Id should not contain space`;
             } else {
                   return true;
             }
@@ -32,7 +32,7 @@ function validateHubPoint(input) {
 }
 
 function validateActionPoint(input) {
-      return validateRequired(input, `You must select a action point`);
+      return validateRequired(input, `You must select an action point`);
 }
 
 
@@ -66,6 +66,14 @@ function validateWidgetId(input) {
 }
 function validateWidgetFriendlyName(input) {
       return validateRequired(input, `You must provide a friendly name for your widget`);
+}
+
+
+function validateServiceHookName(input) {
+      return validateRequired(input, `You must provide a name for your service hook`);
+}
+function validateServiceHookFiendlyName(input) {
+      return validateRequired(input, `You must provide a friendly name for your service hook`);
 }
 
 function getHubPoint() {
@@ -108,6 +116,7 @@ function setJsonTaskScript(scriptMode, taskname) {
 }
 
 function setEventsText(eventsList) {
+
       var jsonproperty = {
             "id": "performAction",
             "name": "PerformAction",
@@ -145,6 +154,8 @@ module.exports = {
       validateTaskType: validateTaskType,
       validateTaskVisibility: validateTaskVisibility,
       validateTaskScripting: validateTaskScripting,
+      validateServiceHookName: validateServiceHookName,
+      validateServiceHookFiendlyName: validateServiceHookFiendlyName,
       getHubPoint: getHubPoint,
       setJsonTaskScript: setJsonTaskScript,
       setEventsText: setEventsText

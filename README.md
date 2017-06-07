@@ -18,6 +18,7 @@ The extension type can be :
 
 - [Node.js](http://nodejs.org/) with [NPM](https://www.npmjs.com/), Minimum version 6.9.5 LTS (https://nodejs.org/)
 - [Yeoman](http://yeoman.io/) : npm install -g yo
+- (Optional) Microsoft Azure subscription for monitoring with Application Insights
 
 ## Installation
 
@@ -50,8 +51,9 @@ npm link
 - Popup will show with a list of available configruations, select **Node.js: Yeoman generator**
 - Change **args** value to generator name: **team-services-extension**
 
-The final configuration should looks like below 
+The final configuration should looks like below
 
+```bash
 {    
     "version": "0.2.0",
     
@@ -69,12 +71,13 @@ The final configuration should looks like below
         }
     ]
 }
+```
 
 ## Execute Unit Tests
 - on the generator folder run this command
 
 ```bash
-mocha test
+npm run test
 ```
 
 ## Getting started
@@ -150,7 +153,8 @@ The generated extensions needs these 3 rd libraries
 - [tslint](https://www.npmjs.com/package/tslint)
 - [tslint-loader](https://www.npmjs.com/package/tslint-loader)
 - [webpack](https://www.npmjs.com/package/webpack)
+- [telemetryclient-team-services-extension](https://www.npmjs.com/package/telemetryclient-team-services-extension)
 
-The DevOps assets folder contains scripts we have sourced from 3rd parties
+The Tools assets folder contains scripts we have sourced from 3rd parties
 
 - [Set-PackageQuality.ps1](https://roadtoalm.com/2017/01/16/programmatically-promote-your-package-quality-with-release-views-in-vsts/), by René van Osnabrugge
