@@ -154,7 +154,3 @@ The generated extensions needs these 3 rd libraries
 - [tslint-loader](https://www.npmjs.com/package/tslint-loader)
 - [webpack](https://www.npmjs.com/package/webpack)
 - [telemetryclient-team-services-extension](https://www.npmjs.com/package/telemetryclient-team-services-extension)
-
-The Tools assets folder contains scripts we have sourced from 3rd parties
-
-- [Set-PackageQuality.ps1](https://roadtoalm.com/2017/01/16/programmatically-promote-your-package-quality-with-release-views-in-vsts/), by René van Osnabrugge
