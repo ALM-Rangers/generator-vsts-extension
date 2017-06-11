@@ -8,11 +8,13 @@ function validateRequired(input, msg) {
 }
 
 function validateExtensionId(input) {
+      var extensionIdValidatorRegExp = /^[a-z0-9][a-z0-9\-]*$/i;
+
       if (!input) {
             return `You must provide an Id for your extension`
       } else {
-            if (input.indexOf(' ') >= 0) {
-                  return `The extension Id should not contain space`;
+            if (input.match(extensionIdValidatorRegExp) === null) {
+                  return `Extension Id should start with an alphanumeric char followed by a sequence of alphanumeric chars or a hyphen (-)`;
             } else {
                   return true;
             }
@@ -20,7 +22,17 @@ function validateExtensionId(input) {
 }
 
 function validateExtensionName(input) {
-      return validateRequired(input, `You must provide a name for your extension`);
+      var extensionNameValidatorRegExp = /^[a-z0-9].*$/i;
+      
+      if(!input) {
+            return validateRequired(input, `You must provide a name for your extension`);
+      } else {
+            if (input.match(extensionNameValidatorRegExp) === null) {
+                  return `Extension name should start with an alphanumeric character`;
+            } else {
+                  return true;
+            }
+      }
 }
 
 function validateExtensionType(input) {
