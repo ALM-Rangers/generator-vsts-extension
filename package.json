@@ -48,7 +48,9 @@
     "typescript": "^2.1.4",
     "yo": "^1.8.5",
     "xunit-file": "^1.0.0",
-    "snyk": "^1.24.6"
+    "snyk": "^1.24.6",
+    "gulp" : "^3.9.1",
+    "gulp-inline-source": "^3.1.0"
   },
   "eslintConfig": {
     "extends": "xo-space",
@@ -59,6 +61,7 @@
   "license": "MIT",
   "scripts": {
     "test": "istanbul cover --report cobertura --report html node_modules/mocha/bin/_mocha -- -R xunit-file",
-    "snyk:test":"snyk test"
+    "snyk:test":"snyk test",
+    "inlinesource": "gulp inlinesource"
   }
 }
