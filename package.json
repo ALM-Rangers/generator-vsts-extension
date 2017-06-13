@@ -60,7 +60,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "test": "istanbul cover --report cobertura --report html node_modules/mocha/bin/_mocha -- -R xunit-file",
+    "test": "istanbul cover --report cobertura --report html node_modules/mocha/bin/_mocha -- -R xunit-file && npm run inlinesource",
     "snyk:test":"snyk test",
     "inlinesource": "gulp inlinesource"
   }
