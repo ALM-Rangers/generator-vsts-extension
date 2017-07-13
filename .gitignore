@@ -7,3 +7,4 @@ TestsResults
 /.github/
 **/*.sqlite
 xunit.xml
+coverage-inline

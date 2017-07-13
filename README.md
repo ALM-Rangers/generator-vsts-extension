@@ -141,6 +141,8 @@ And npm dependencies list are :
 - [Yeoman-test](https://www.npmjs.com/package/yeoman-test)
 - [Yo](https://www.npmjs.com/package/yo)
 - [yosay](https://www.npmjs.com/package/yosay)
+- [gulp](https://www.npmjs.com/package/gulp)
+- [gulp-inline-source](https://www.npmjs.com/package/gulp-inline-source)
 
 The generated extensions needs these 3 rd libraries
 
