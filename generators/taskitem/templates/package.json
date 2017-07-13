@@ -7,10 +7,11 @@
     "install-task-lib" : "cd <%-taskName%> && npm install --save-dev"
   },
   "devDependencies": {
+    "@types/node": "^8.0.7",
     "tfx-cli": "^0.4.5",
-    "typescript": "^2.3.2"
+    "typescript": "2.3.4"
   },
-  "name": "packagetask",
+  "name": "vstsexttask",
   "private": true,
   "version": "0.0.1"
 }
