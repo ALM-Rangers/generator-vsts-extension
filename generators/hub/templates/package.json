@@ -11,7 +11,7 @@
   "devDependencies": {
     "rimraf": "^2.6.1",
     "tfx-cli": "^0.4.5",
-    "typescript": "^2.3.2",
+    "typescript": "2.3.4",
     "cpx": "^1.5.0",
     "ts-loader": "^2.0.0",
     "tslint": "^5.2.0",
@@ -21,11 +21,11 @@
   "dependencies": {
     "@types/jquery": "^2.0.34",
     "@types/q": "0.0.32",
-    "vss-web-extension-sdk": "^2.116.1"
-    <% if (UseAITelemetry) { %>,"applicationinsights-js": "^1.0.9",
+    "vss-web-extension-sdk": "^2.117.0"
+    <% if (UseAITelemetry) { %>,"applicationinsights-js": "^1.0.11",
     "telemetryclient-team-services-extension": "*"<% } %>
   },
-  "name": "",
+  "name": "vstsexthub",
   "private": true,
   "version": "0.0.0"
 }

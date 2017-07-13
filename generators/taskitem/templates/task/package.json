@@ -6,8 +6,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@types/node": "^7.0.18",
-    "@types/q": "0.0.32",
-    "vsts-task-lib": "^1.1.0"
+    "vsts-task-lib": "^2.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.7",
+    "@types/q": "1.0.2"
   }
 }
