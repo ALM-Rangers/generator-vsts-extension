@@ -3,7 +3,7 @@ coverage
 TestsResults
 .vs
 .github
-
+/.vs/
 /.github/
 **/*.sqlite
 xunit.xml
