@@ -7,9 +7,11 @@ module.exports = {
         main: "./src/main.ts",
         configuration: "./src/configuration.ts"
     },
+    devtool: "source-map",
     output: {
         filename: "[name].js",
-        libraryTarget: "amd"
+        libraryTarget: "amd",
+        sourceMapFilename: "[file].map"
     },
     externals: [
         /^VSS\/.*/, /^TFS\/.*/, /^q$/
