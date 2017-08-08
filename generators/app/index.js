@@ -22,7 +22,7 @@ function construct() {
 // sub generators. I also use this to determine which data I still need to
 // prompt for.
 function init() {
-    this.log(yosay('Welcome to Team Services Extensions\n' + 'v.' + this.rootGeneratorVersion()));
+    this.log(yosay('Welcome to Visual Studio Team Services Extensions\n' + 'v.' + this.rootGeneratorVersion()));
 
 }
 
