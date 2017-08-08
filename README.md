@@ -1,4 +1,4 @@
-# Visual Studio Team Services (VSTS) extension code generator
+﻿# Visual Studio Team Services (VSTS) extension code generator
 
 ![VSTS](https://almrangers.visualstudio.com/_apis/public/build/definitions/7f3cfb9a-d1cb-4e66-9d36-1af87b906fe9/137/badge) | [![NPM](https://nodei.co/npm/generator-team-services-extension.png?mini=true)](https://www.npmjs.com/package/generator-team-services-extension)
 
@@ -155,4 +155,4 @@ The generated extensions needs these 3 rd libraries
 - [tslint](https://www.npmjs.com/package/tslint)
 - [tslint-loader](https://www.npmjs.com/package/tslint-loader)
 - [webpack](https://www.npmjs.com/package/webpack)
-- [telemetryclient-team-services-extension](https://www.npmjs.com/package/telemetryclient-team-services-extension)
+- [telemetryclient-team-services-extension](https://www.npmjs.com/package/telemetryclient-vsts-extension)

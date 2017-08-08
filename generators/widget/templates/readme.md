@@ -14,13 +14,13 @@
 
 This has been updated to be inline with the [M109](https://www.visualstudio.com/en-us/integrate/extensions/support/release-notes) release, which includes support for VSTS hosting of static content (.html,.css,.js) and the use of the tfx utility.
 
-####If you run into any issues with the version of Node that is installed with the Node.js Tools for Visual Studio, you can change the path to Node by going into Tools -> Options -> Projects and Solutions -> External Web Tools.
+#### If you run into any issues with the version of Node that is installed with the Node.js Tools for Visual Studio, you can change the path to Node by going into Tools -> Options -> Projects and Solutions -> External Web Tools.
 
-###For further information, please consult the following websites:
+### For further information, please consult the following websites:
 - The VSTS Extensions page on [MSDN](https://www.visualstudio.com/en-us/integrate/extensions/overview)
-- The VSTS Extensions sample repo on [GitHub](https://github.com/Microsoft/vso-extension-samples)
+- The VSTS Extensions sample repo on [GitHub](https://github.com/Microsoft/vsts-extension-samples)
 - A great [example](https://binary-stuff.com/post/a-hello-world-for-vso-extensions) project from Visual Studio ALM Ranger Gordon Beeming
 
-####Thanks for choosing this project template.  Candid feedback is always welcome!
+#### Thanks for choosing this project template.  Candid feedback is always welcome!
 
 Josh
