@@ -1,4 +1,4 @@
-#Welcome to Visual Studio Team Services Extensions!
+﻿#Welcome to Visual Studio Team Services Extensions!
 
 ###Please note that version 3.0 contains changes that could break existing project structures.  It also leverages TypeScript 2.0.
 ###This project template was put together to help you get started quickly with VSTS extension development.  The following components are included:
@@ -19,7 +19,7 @@ This has been updated to be inline with the [M109](https://www.visualstudio.com/
 ###For further information, please consult the following websites:
 - The VSTS Extensions page on [MSDN](https://www.visualstudio.com/en-us/integrate/extensions/overview)
 - The VSTS Extensions sample repo on [GitHub](https://github.com/Microsoft/vso-extension-samples)
-- A great [example](https://binary-stuff.com/post/a-hello-world-for-vso-extensions) project from VS ALM Ranger Gordon Beeming
+- A great [example](https://binary-stuff.com/post/a-hello-world-for-vso-extensions) project from Visual Studio ALM Ranger Gordon Beeming
 
 ####Thanks for choosing this project template.  Candid feedback is always welcome!
 
