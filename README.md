@@ -90,7 +90,7 @@ We've included **//TODO:** placeholders in the generated license, thirdpartynoti
 
 Take a look at the information on getting started with extensions, RESTful APIs, SDK, and the marketplace. I
 
-- [Overview](https://www.visualstudio.com/en-us/docs/integrate/extensions/overview)
+- [Overview](https://docs.microsoft.com/en-us/vsts/extend/overview)
 - [RESTful API Library](https://www.visualstudio.com/en-us/docs/integrate/api/overview)
 - [SDK](https://github.com/Microsoft/vss-web-extension-sdk)
 - [VSTS Marketplace](https://marketplace.visualstudio.com/VSTS)

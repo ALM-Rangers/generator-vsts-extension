@@ -17,7 +17,7 @@ This has been updated to be inline with the [M109](https://www.visualstudio.com/
 #### If you run into any issues with the version of Node that is installed with the Node.js Tools for Visual Studio, you can change the path to Node by going into Tools -> Options -> Projects and Solutions -> External Web Tools.
 
 ### For further information, please consult the following websites:
-- The VSTS Extensions page on [MSDN](https://www.visualstudio.com/en-us/integrate/extensions/overview)
+- The VSTS Extensions page on [MSDN](https://docs.microsoft.com/en-us/vsts/extend/overview)
 - The VSTS Extensions sample repo on [GitHub](https://github.com/Microsoft/vsts-extension-samples)
 - A great [example](https://binary-stuff.com/post/a-hello-world-for-vso-extensions) project from Visual Studio ALM Ranger Gordon Beeming
 
