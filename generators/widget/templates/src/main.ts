@@ -35,7 +35,7 @@
                         });
                 };
                 return {
-                    load: function (widgetSettings){
+                    load: function (widgetSettings) {
 <% if (UseAITelemetry) { %>
 tc.TelemetryClient.getClient(telemetryClientSettings.settings).trackPageView("<%= WidgetId %>.Index");
 <% } %>
