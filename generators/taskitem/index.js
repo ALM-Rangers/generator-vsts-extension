@@ -182,17 +182,17 @@ function writeFiles() {
 
       if (this.taskScripting == "PowerShell") {
             this.fs.copyTpl(
-                  this.templatePath('Task/task.ps1'),
+                  this.templatePath('task/task.ps1'),
                   this.destinationPath(taskFolder + '/' + this.taskName + '.ps1'), tokens
             );
       } else if (this.taskScripting == "TypeScript") {
             this.fs.copyTpl(
-                  this.templatePath('Task/task.ts'),
+                  this.templatePath('task/task.ts'),
                   this.destinationPath(taskFolder + '/' + this.taskName + '.ts'), tokens
             );
 
             this.fs.copyTpl(
-                  this.templatePath('Task/package.json'),
+                  this.templatePath('task/package.json'),
                   this.destinationPath(taskFolder + '/' + 'package.json'), tokens
             );
 
@@ -204,12 +204,12 @@ function writeFiles() {
 
 
       this.fs.copyTpl(
-            this.templatePath('Task/task.json'),
+            this.templatePath('task/task.json'),
             this.destinationPath(taskFolder + '/task.json'), tokens
 
       );
       this.fs.copy(
-            this.templatePath('Task/icon.png'),
+            this.templatePath('task/icon.png'),
             this.destinationPath(taskFolder + '/icon.png')
       );
 
@@ -249,13 +249,13 @@ function writeFiles() {
 
       if (this.useVS) {
             this.fs.copyTpl(
-                  this.templatePath('extId.csproj'),
+                  this.templatePath('ExtId.csproj'),
                   this.destinationPath(extensionFolder + '/' + this.extId + '.csproj'), tokens
             );
 
 
             this.fs.copyTpl(
-                  this.templatePath('extId.sln'),
+                  this.templatePath('ExtId.sln'),
                   this.destinationPath(this.extId + '/' + this.extId + '.sln'), tokens
             );
 
@@ -286,7 +286,7 @@ function install() {
       this.spawnCommandSync('npm', ['install'], { stdio: ['pipe', 'pipe', process.stderr] });
 
       this.log(`+ Running npm run package for vsix generating`);
-     
+
       if (this.taskScripting == "TypeScript") {
             this.spawnCommandSync('npm', ['run', 'install-task-lib'], { stdio: ['pipe', 'pipe', process.stderr] });
       }

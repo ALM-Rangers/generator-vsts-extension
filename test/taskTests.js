@@ -46,25 +46,24 @@ describe('generator-team-services-extension-task-Powershell', function () {
 
 
   it('generator-team-services-extension-task-Powershell:creates files', () => {
-    var root = testPath + '\\TestextTaskId1\\TestextTaskId1\\';
-    var taskPath = root + "taskName1\\"
+    var root = testPath + '/TestextTaskId1/TestextTaskId1/';
+    var taskPath = root + 'taskName1/';
     assert.file([
       root + 'TestextTaskId1.csproj',
       root + 'package.json',
       root + 'vss-extension.json',
       root + 'static/images/logo.png',
-      root + 'static/images/screen1.png',
+      root + 'static/images/Screen1.png',
       root + 'license.md',
       root + 'overview.md',
       root + 'ThirdPartyNotices.txt',
-      taskPath + "taskName1.ps1",
-      taskPath + "task.json",
-      taskPath + "icon.png"
+      taskPath + 'taskName1.ps1',
+      taskPath + 'task.json',
+      taskPath + 'icon.png'
     ]);
     assert.fileContent(root + 'vss-extension.json', /"id": "TestextTaskId1"/);
-    assert.fileContent(root + 'vss-extension.json', /"name": "TestextTask1"/)
-
-  })
+    assert.fileContent(root + 'vss-extension.json', /"name": "TestextTask1"/);
+  });
 
   it(`generator-team-services-extension-task-Powershell:npm install should be called`, () => {
     assert.equal(1, spawnStub.withArgs(`npm`, [`install`], { stdio: ['pipe', 'pipe', process.stderr] }).callCount, `npm install was not be called`);
@@ -115,28 +114,27 @@ describe('generator-team-services-extension-task-TypeScript', function () {
 
 
   it('generator-team-services-extension-task-TypeScript:creates files', () => {
-    var root = testPath + '\\TestextTaskId1\\TestextTaskId1\\';
-    var taskPath = root + "taskName1\\"
+    var root = testPath + '/TestextTaskId1/TestextTaskId1/';
+    var taskPath = root + 'taskName1/';
     assert.file([
       root + 'TestextTaskId1.csproj',
       root + 'package.json',
       root + 'vss-extension.json',
       root + 'static/images/logo.png',
-      root + 'static/images/screen1.png',
+      root + 'static/images/Screen1.png',
       root + 'license.md',
       root + 'overview.md',
       root + 'ThirdPartyNotices.txt',
       root + 'tsconfig.json',
-      taskPath + "taskName1.ts",
-      taskPath + "package.json",
-      taskPath + "task.json",
-      taskPath + "icon.png"
+      taskPath + 'taskName1.ts',
+      taskPath + 'package.json',
+      taskPath + 'task.json',
+      taskPath + 'icon.png'
     ]);
-    
-    assert.fileContent(root + 'vss-extension.json', /"id": "TestextTaskId1"/);
-    assert.fileContent(root + 'vss-extension.json', /"name": "TestextTask1"/)
 
-  })
+    assert.fileContent(root + 'vss-extension.json', /"id": "TestextTaskId1"/);
+    assert.fileContent(root + 'vss-extension.json', /"name": "TestextTask1"/);
+  });
 
   it(`generator-team-services-extension-task-TypeScript:npm install should be called`, () => {
     assert.equal(1, spawnStub.withArgs(`npm`, [`install`], { stdio: ['pipe', 'pipe', process.stderr] }).callCount, `npm install was not be called`);
